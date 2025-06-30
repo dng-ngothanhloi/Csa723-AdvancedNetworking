@@ -1,9 +1,8 @@
 ---
 name: Task request
 about: Describe this isMẫu tạo issue cho các nhiệm vụ (task) của project K30-MSC-Team2sue
-  template's purpose here.
 title: ''
-labels: ''
+labels: 'task'
 assignees: ''
 
 ---
@@ -24,6 +23,3 @@ assignees: ''
 
 ## Hướng dẫn thực hiện (nếu có)
 <!-- Thêm hướng dẫn cụ thể hoặc tài nguyên tham khảo nếu cần thiết cho task này. -->
-
-## Ghi chú bổ sung
-<!-- Thêm bất kỳ thông tin nào khác cần lưu ý cho task này. -->

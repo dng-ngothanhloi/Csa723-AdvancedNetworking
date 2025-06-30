@@ -2,37 +2,48 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Custom fields
+- **Status**: <!-- To Do, In Progress, Done, Cancel, Pending -->
+- **Type**: <!-- Bug, Issue, Problem, ... -->
+- **Course**: <!-- CS-A723-AdvancedNetworking -->
+- **Sprint**: <!-- AdvancedNetworking#1, AdvancedNetworking#2, ... -->
+- **Deadline**: <!-- dd/mm/yyyy -->
+- **Category**: <!-- Bug, Error, Performance, ... -->
 
-**To Reproduce**
-Steps to reproduce the behavior:
+## Mô tả lỗi
+<!-- Mô tả chi tiết lỗi cần báo cáo. Đưa ra thông tin về lỗi, bối cảnh xảy ra lỗi. -->
+
+## Output mong muốn
+<!-- Liệt kê các sản phẩm đầu ra, tiêu chí hoàn thành cho việc sửa lỗi này. -->
+
+## Hướng dẫn thực hiện (nếu có)
+<!-- Thêm hướng dẫn cụ thể hoặc tài nguyên tham khảo nếu cần thiết cho việc sửa lỗi này. -->
+
+## Steps to reproduce
+<!-- Các bước để tái hiện lỗi -->
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Expected behavior
+<!-- Mô tả hành vi mong đợi -->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## Actual behavior
+<!-- Mô tả hành vi thực tế -->
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Screenshots
+<!-- Nếu có thể, thêm screenshot để minh họa lỗi -->
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Environment
+- OS: [e.g. Windows 10, macOS, Ubuntu]
+- Browser: [e.g. Chrome, Firefox, Safari]
+- Version: [e.g. 22]
 
-**Additional context**
-Add any other context about the problem here.
+## Additional context
+<!-- Add any other context about the problem here. -->

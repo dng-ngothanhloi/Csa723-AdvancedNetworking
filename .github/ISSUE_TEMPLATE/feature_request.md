@@ -2,19 +2,33 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: 'enhancement'
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Custom fields
+- **Status**: <!-- To Do, In Progress, Done, Cancel, Pending -->
+- **Type**: <!-- Epic, Story, Feature, Enhancement, ... -->
+- **Course**: <!-- CS-A723-AdvancedNetworking -->
+- **Sprint**: <!-- AdvancedNetworking#1, AdvancedNetworking#2, ... -->
+- **Deadline**: <!-- dd/mm/yyyy -->
+- **Category**: <!-- Feature, UI/UX, Backend, Frontend, ... -->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Mô tả tính năng
+<!-- Mô tả chi tiết tính năng cần phát triển. Đưa ra yêu cầu, bối cảnh hoặc lý do của feature này. -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Output mong muốn
+<!-- Liệt kê các sản phẩm đầu ra, tiêu chí hoàn thành cho feature này. -->
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Hướng dẫn thực hiện (nếu có)
+<!-- Thêm hướng dẫn cụ thể hoặc tài nguyên tham khảo nếu cần thiết cho feature này. -->
+
+## Acceptance Criteria
+<!-- Các tiêu chí chấp nhận để feature được coi là hoàn thành -->
+- [ ] 
+- [ ] 
+- [ ] 
+
+## Additional context
+<!-- Add any other context or screenshots about the feature request here. -->

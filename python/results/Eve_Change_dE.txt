@@ -1,0 +1,15 @@
+===== KỊCH BẢN 3: Multi-user NOMA, quét d_E (Eve chủ động gây nhiễu) =====
+d_E = 20 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 63.64 Mbps | BER_B1 = 4.9470e-01 | BER_B2 = 5.0180e-01 | BER_E = 5.0030e-01
+d_E = 30 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 46.74 Mbps | BER_B1 = 5.0610e-01 | BER_B2 = 5.0090e-01 | BER_E = 5.0790e-01
+d_E = 40 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 35.91 Mbps | BER_B1 = 4.9950e-01 | BER_B2 = 4.9540e-01 | BER_E = 4.9310e-01
+d_E = 50 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 27.65 Mbps | BER_B1 = 4.9240e-01 | BER_B2 = 5.0470e-01 | BER_E = 4.9310e-01
+d_E = 60 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 21.84 Mbps | BER_B1 = 4.9930e-01 | BER_B2 = 5.0580e-01 | BER_E = 5.0030e-01
+d_E = 70 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 17.51 Mbps | BER_B1 = 5.0070e-01 | BER_B2 = 4.9600e-01 | BER_E = 5.0450e-01
+d_E = 80 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 13.83 Mbps | BER_B1 = 4.8920e-01 | BER_B2 = 5.0610e-01 | BER_E = 4.9690e-01
+d_E = 90 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 11.34 Mbps | BER_B1 = 4.9360e-01 | BER_B2 = 5.0070e-01 | BER_E = 5.0450e-01
+d_E = 100 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 9.32 Mbps | BER_B1 = 4.9980e-01 | BER_B2 = 5.0030e-01 | BER_E = 5.0840e-01
+d_E = 110 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 7.60 Mbps | BER_B1 = 4.9560e-01 | BER_B2 = 5.0450e-01 | BER_E = 4.9180e-01
+d_E = 120 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 6.34 Mbps | BER_B1 = 4.9740e-01 | BER_B2 = 5.0630e-01 | BER_E = 4.9030e-01
+d_E = 130 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 5.27 Mbps | BER_B1 = 5.0070e-01 | BER_B2 = 5.0240e-01 | BER_E = 5.0050e-01
+d_E = 140 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 4.40 Mbps | BER_B1 = 4.9130e-01 | BER_B2 = 4.9520e-01 | BER_E = 4.9950e-01
+d_E = 150 m | C_B1 = 0.00 Mbps | C_B2 = 0.00 Mbps | C_E = 3.78 Mbps | BER_B1 = 5.0540e-01 | BER_B2 = 4.9930e-01 | BER_E = 5.0730e-01

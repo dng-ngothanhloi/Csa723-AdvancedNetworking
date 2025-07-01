@@ -1,0 +1,133 @@
+
+===== KỊCH BẢN 2: Multi-user NOMA, quét SNR_Eve (Eve chủ động gây nhiễu) =====
+==== THÔNG SỐ HỆ THỐNG KỊCH BẢN 2 ====
+Công suất truyền P_A: 1 W
+Nhiễu nền N_0: 3.98e-17 W
+Hệ số suy hao alpha: 3
+Băng thông: 10.0 MHz
+Khoảng cách: Bob1 = 50m, Bob2 = 100m, Eve = 70m
+Phân bổ công suất: alpha1 = 0.111, alpha2 = 0.889 (tổng = 1.000)
+Tỷ lệ lỗi SIC: epsilon = 0.01
+============================
+
+SNR_Bob = 0 dB, SNR_Eve = 0 dB | C_B1 = 1.45 Mbps | C_B2 = 1.48 Mbps | C_E = 3.69 Mbps | BER_B1 = 5.0390e-01 | BER_B2 = 4.9230e-01 | BER_E = 4.9820e-01
+SNR_Bob = 0 dB, SNR_Eve = 2 dB | C_B1 = 1.44 Mbps | C_B2 = 1.43 Mbps | C_E = 3.61 Mbps | BER_B1 = 5.0250e-01 | BER_B2 = 4.9340e-01 | BER_E = 4.9630e-01
+SNR_Bob = 0 dB, SNR_Eve = 4 dB | C_B1 = 1.41 Mbps | C_B2 = 1.48 Mbps | C_E = 3.71 Mbps | BER_B1 = 4.9610e-01 | BER_B2 = 4.9960e-01 | BER_E = 5.0030e-01
+SNR_Bob = 0 dB, SNR_Eve = 6 dB | C_B1 = 1.42 Mbps | C_B2 = 1.43 Mbps | C_E = 3.67 Mbps | BER_B1 = 4.9330e-01 | BER_B2 = 4.9010e-01 | BER_E = 5.0580e-01
+SNR_Bob = 0 dB, SNR_Eve = 8 dB | C_B1 = 1.44 Mbps | C_B2 = 1.45 Mbps | C_E = 3.73 Mbps | BER_B1 = 5.0580e-01 | BER_B2 = 5.0070e-01 | BER_E = 4.9720e-01
+SNR_Bob = 0 dB, SNR_Eve = 10 dB | C_B1 = 1.43 Mbps | C_B2 = 1.44 Mbps | C_E = 3.70 Mbps | BER_B1 = 5.0330e-01 | BER_B2 = 4.9830e-01 | BER_E = 4.9600e-01
+SNR_Bob = 0 dB, SNR_Eve = 12 dB | C_B1 = 1.42 Mbps | C_B2 = 1.47 Mbps | C_E = 3.69 Mbps | BER_B1 = 4.9670e-01 | BER_B2 = 5.0430e-01 | BER_E = 4.9530e-01
+SNR_Bob = 0 dB, SNR_Eve = 14 dB | C_B1 = 1.42 Mbps | C_B2 = 1.43 Mbps | C_E = 3.72 Mbps | BER_B1 = 5.0670e-01 | BER_B2 = 5.0460e-01 | BER_E = 5.0570e-01
+SNR_Bob = 0 dB, SNR_Eve = 16 dB | C_B1 = 1.42 Mbps | C_B2 = 1.46 Mbps | C_E = 3.71 Mbps | BER_B1 = 4.9580e-01 | BER_B2 = 5.1030e-01 | BER_E = 5.0410e-01
+SNR_Bob = 0 dB, SNR_Eve = 18 dB | C_B1 = 1.40 Mbps | C_B2 = 1.44 Mbps | C_E = 3.73 Mbps | BER_B1 = 5.0100e-01 | BER_B2 = 5.0940e-01 | BER_E = 5.0040e-01
+SNR_Bob = 0 dB, SNR_Eve = 20 dB | C_B1 = 1.42 Mbps | C_B2 = 1.43 Mbps | C_E = 3.66 Mbps | BER_B1 = 4.9710e-01 | BER_B2 = 4.9750e-01 | BER_E = 5.0170e-01
+SNR_Bob = 2 dB, SNR_Eve = 0 dB | C_B1 = 2.17 Mbps | C_B2 = 2.19 Mbps | C_E = 5.26 Mbps | BER_B1 = 4.9420e-01 | BER_B2 = 5.0410e-01 | BER_E = 4.9500e-01
+SNR_Bob = 2 dB, SNR_Eve = 2 dB | C_B1 = 2.14 Mbps | C_B2 = 2.20 Mbps | C_E = 5.37 Mbps | BER_B1 = 4.9880e-01 | BER_B2 = 4.9750e-01 | BER_E = 4.9980e-01
+SNR_Bob = 2 dB, SNR_Eve = 4 dB | C_B1 = 2.15 Mbps | C_B2 = 2.20 Mbps | C_E = 5.36 Mbps | BER_B1 = 5.0370e-01 | BER_B2 = 4.9960e-01 | BER_E = 5.0110e-01
+SNR_Bob = 2 dB, SNR_Eve = 6 dB | C_B1 = 2.17 Mbps | C_B2 = 2.18 Mbps | C_E = 5.28 Mbps | BER_B1 = 5.0780e-01 | BER_B2 = 5.0580e-01 | BER_E = 5.0050e-01
+SNR_Bob = 2 dB, SNR_Eve = 8 dB | C_B1 = 2.14 Mbps | C_B2 = 2.20 Mbps | C_E = 5.34 Mbps | BER_B1 = 5.0670e-01 | BER_B2 = 5.0070e-01 | BER_E = 5.0060e-01
+SNR_Bob = 2 dB, SNR_Eve = 10 dB | C_B1 = 2.13 Mbps | C_B2 = 2.18 Mbps | C_E = 5.36 Mbps | BER_B1 = 5.1070e-01 | BER_B2 = 5.0380e-01 | BER_E = 4.9100e-01
+SNR_Bob = 2 dB, SNR_Eve = 12 dB | C_B1 = 2.12 Mbps | C_B2 = 2.19 Mbps | C_E = 5.30 Mbps | BER_B1 = 4.9330e-01 | BER_B2 = 5.0190e-01 | BER_E = 4.9630e-01
+SNR_Bob = 2 dB, SNR_Eve = 14 dB | C_B1 = 2.14 Mbps | C_B2 = 2.20 Mbps | C_E = 5.34 Mbps | BER_B1 = 4.9960e-01 | BER_B2 = 4.9720e-01 | BER_E = 4.9830e-01
+SNR_Bob = 2 dB, SNR_Eve = 16 dB | C_B1 = 2.14 Mbps | C_B2 = 2.23 Mbps | C_E = 5.29 Mbps | BER_B1 = 4.9900e-01 | BER_B2 = 4.9890e-01 | BER_E = 4.9390e-01
+SNR_Bob = 2 dB, SNR_Eve = 18 dB | C_B1 = 2.11 Mbps | C_B2 = 2.17 Mbps | C_E = 5.24 Mbps | BER_B1 = 4.9920e-01 | BER_B2 = 4.9920e-01 | BER_E = 5.0530e-01
+SNR_Bob = 2 dB, SNR_Eve = 20 dB | C_B1 = 2.08 Mbps | C_B2 = 2.19 Mbps | C_E = 5.32 Mbps | BER_B1 = 4.9610e-01 | BER_B2 = 4.9830e-01 | BER_E = 5.0290e-01
+SNR_Bob = 4 dB, SNR_Eve = 0 dB | C_B1 = 3.14 Mbps | C_B2 = 3.26 Mbps | C_E = 7.38 Mbps | BER_B1 = 5.0360e-01 | BER_B2 = 4.9950e-01 | BER_E = 5.0350e-01
+SNR_Bob = 4 dB, SNR_Eve = 2 dB | C_B1 = 3.18 Mbps | C_B2 = 3.28 Mbps | C_E = 7.42 Mbps | BER_B1 = 4.9700e-01 | BER_B2 = 4.9640e-01 | BER_E = 5.0360e-01
+SNR_Bob = 4 dB, SNR_Eve = 4 dB | C_B1 = 3.15 Mbps | C_B2 = 3.29 Mbps | C_E = 7.45 Mbps | BER_B1 = 5.0020e-01 | BER_B2 = 4.9240e-01 | BER_E = 5.0050e-01
+SNR_Bob = 4 dB, SNR_Eve = 6 dB | C_B1 = 3.12 Mbps | C_B2 = 3.28 Mbps | C_E = 7.49 Mbps | BER_B1 = 5.0250e-01 | BER_B2 = 5.0450e-01 | BER_E = 5.0450e-01
+SNR_Bob = 4 dB, SNR_Eve = 8 dB | C_B1 = 3.16 Mbps | C_B2 = 3.28 Mbps | C_E = 7.44 Mbps | BER_B1 = 5.0910e-01 | BER_B2 = 4.9770e-01 | BER_E = 5.0270e-01
+SNR_Bob = 4 dB, SNR_Eve = 10 dB | C_B1 = 3.14 Mbps | C_B2 = 3.26 Mbps | C_E = 7.53 Mbps | BER_B1 = 5.0350e-01 | BER_B2 = 4.9670e-01 | BER_E = 4.9830e-01
+SNR_Bob = 4 dB, SNR_Eve = 12 dB | C_B1 = 3.21 Mbps | C_B2 = 3.30 Mbps | C_E = 7.28 Mbps | BER_B1 = 5.1270e-01 | BER_B2 = 4.9810e-01 | BER_E = 5.0340e-01
+SNR_Bob = 4 dB, SNR_Eve = 14 dB | C_B1 = 3.10 Mbps | C_B2 = 3.25 Mbps | C_E = 7.47 Mbps | BER_B1 = 4.9900e-01 | BER_B2 = 4.9730e-01 | BER_E = 4.9880e-01
+SNR_Bob = 4 dB, SNR_Eve = 16 dB | C_B1 = 3.10 Mbps | C_B2 = 3.29 Mbps | C_E = 7.50 Mbps | BER_B1 = 4.9920e-01 | BER_B2 = 4.9390e-01 | BER_E = 4.9600e-01
+SNR_Bob = 4 dB, SNR_Eve = 18 dB | C_B1 = 3.13 Mbps | C_B2 = 3.26 Mbps | C_E = 7.32 Mbps | BER_B1 = 4.9920e-01 | BER_B2 = 4.9540e-01 | BER_E = 5.0140e-01
+SNR_Bob = 4 dB, SNR_Eve = 20 dB | C_B1 = 3.04 Mbps | C_B2 = 3.22 Mbps | C_E = 7.51 Mbps | BER_B1 = 4.9890e-01 | BER_B2 = 4.9140e-01 | BER_E = 4.9950e-01
+SNR_Bob = 6 dB, SNR_Eve = 0 dB | C_B1 = 4.44 Mbps | C_B2 = 4.72 Mbps | C_E = 10.18 Mbps | BER_B1 = 4.9580e-01 | BER_B2 = 4.9740e-01 | BER_E = 4.9900e-01
+SNR_Bob = 6 dB, SNR_Eve = 2 dB | C_B1 = 4.57 Mbps | C_B2 = 4.71 Mbps | C_E = 10.18 Mbps | BER_B1 = 5.0060e-01 | BER_B2 = 4.9750e-01 | BER_E = 5.0310e-01
+SNR_Bob = 6 dB, SNR_Eve = 4 dB | C_B1 = 4.54 Mbps | C_B2 = 4.73 Mbps | C_E = 10.23 Mbps | BER_B1 = 4.9990e-01 | BER_B2 = 4.9010e-01 | BER_E = 5.0270e-01
+SNR_Bob = 6 dB, SNR_Eve = 6 dB | C_B1 = 4.55 Mbps | C_B2 = 4.75 Mbps | C_E = 10.26 Mbps | BER_B1 = 4.9970e-01 | BER_B2 = 4.9550e-01 | BER_E = 5.0000e-01
+SNR_Bob = 6 dB, SNR_Eve = 8 dB | C_B1 = 4.53 Mbps | C_B2 = 4.74 Mbps | C_E = 10.13 Mbps | BER_B1 = 5.0230e-01 | BER_B2 = 5.0190e-01 | BER_E = 4.9970e-01
+SNR_Bob = 6 dB, SNR_Eve = 10 dB | C_B1 = 4.51 Mbps | C_B2 = 4.66 Mbps | C_E = 10.26 Mbps | BER_B1 = 4.9910e-01 | BER_B2 = 4.9560e-01 | BER_E = 4.9730e-01
+SNR_Bob = 6 dB, SNR_Eve = 12 dB | C_B1 = 4.57 Mbps | C_B2 = 4.77 Mbps | C_E = 10.20 Mbps | BER_B1 = 5.0310e-01 | BER_B2 = 5.0280e-01 | BER_E = 5.0130e-01
+SNR_Bob = 6 dB, SNR_Eve = 14 dB | C_B1 = 4.49 Mbps | C_B2 = 4.76 Mbps | C_E = 10.13 Mbps | BER_B1 = 5.0080e-01 | BER_B2 = 4.9500e-01 | BER_E = 5.0240e-01
+SNR_Bob = 6 dB, SNR_Eve = 16 dB | C_B1 = 4.50 Mbps | C_B2 = 4.77 Mbps | C_E = 10.10 Mbps | BER_B1 = 4.9970e-01 | BER_B2 = 5.0430e-01 | BER_E = 5.0290e-01
+SNR_Bob = 6 dB, SNR_Eve = 18 dB | C_B1 = 4.48 Mbps | C_B2 = 4.64 Mbps | C_E = 10.13 Mbps | BER_B1 = 5.0530e-01 | BER_B2 = 5.0530e-01 | BER_E = 4.9500e-01
+SNR_Bob = 6 dB, SNR_Eve = 20 dB | C_B1 = 4.51 Mbps | C_B2 = 4.69 Mbps | C_E = 9.99 Mbps | BER_B1 = 5.0510e-01 | BER_B2 = 5.0820e-01 | BER_E = 5.0300e-01
+SNR_Bob = 8 dB, SNR_Eve = 0 dB | C_B1 = 6.34 Mbps | C_B2 = 6.71 Mbps | C_E = 13.44 Mbps | BER_B1 = 4.8990e-01 | BER_B2 = 5.0270e-01 | BER_E = 4.9540e-01
+SNR_Bob = 8 dB, SNR_Eve = 2 dB | C_B1 = 6.29 Mbps | C_B2 = 6.69 Mbps | C_E = 13.51 Mbps | BER_B1 = 5.0510e-01 | BER_B2 = 5.0030e-01 | BER_E = 4.9900e-01
+SNR_Bob = 8 dB, SNR_Eve = 4 dB | C_B1 = 6.44 Mbps | C_B2 = 6.65 Mbps | C_E = 13.45 Mbps | BER_B1 = 4.8740e-01 | BER_B2 = 4.9670e-01 | BER_E = 4.9560e-01
+SNR_Bob = 8 dB, SNR_Eve = 6 dB | C_B1 = 6.29 Mbps | C_B2 = 6.61 Mbps | C_E = 13.60 Mbps | BER_B1 = 4.9350e-01 | BER_B2 = 5.0790e-01 | BER_E = 4.9090e-01
+SNR_Bob = 8 dB, SNR_Eve = 8 dB | C_B1 = 6.28 Mbps | C_B2 = 6.71 Mbps | C_E = 13.50 Mbps | BER_B1 = 4.9530e-01 | BER_B2 = 4.9960e-01 | BER_E = 4.9160e-01
+SNR_Bob = 8 dB, SNR_Eve = 10 dB | C_B1 = 6.35 Mbps | C_B2 = 6.71 Mbps | C_E = 13.44 Mbps | BER_B1 = 4.9660e-01 | BER_B2 = 5.0250e-01 | BER_E = 5.0960e-01
+SNR_Bob = 8 dB, SNR_Eve = 12 dB | C_B1 = 6.25 Mbps | C_B2 = 6.73 Mbps | C_E = 13.48 Mbps | BER_B1 = 4.9700e-01 | BER_B2 = 4.9860e-01 | BER_E = 5.0270e-01
+SNR_Bob = 8 dB, SNR_Eve = 14 dB | C_B1 = 6.30 Mbps | C_B2 = 6.73 Mbps | C_E = 13.40 Mbps | BER_B1 = 4.9470e-01 | BER_B2 = 4.9680e-01 | BER_E = 4.9970e-01
+SNR_Bob = 8 dB, SNR_Eve = 16 dB | C_B1 = 6.19 Mbps | C_B2 = 6.79 Mbps | C_E = 13.52 Mbps | BER_B1 = 4.9890e-01 | BER_B2 = 4.9750e-01 | BER_E = 4.9990e-01
+SNR_Bob = 8 dB, SNR_Eve = 18 dB | C_B1 = 6.23 Mbps | C_B2 = 6.64 Mbps | C_E = 13.43 Mbps | BER_B1 = 4.9920e-01 | BER_B2 = 5.0470e-01 | BER_E = 5.0190e-01
+SNR_Bob = 8 dB, SNR_Eve = 20 dB | C_B1 = 6.18 Mbps | C_B2 = 6.75 Mbps | C_E = 13.41 Mbps | BER_B1 = 4.9980e-01 | BER_B2 = 4.9030e-01 | BER_E = 4.9350e-01
+SNR_Bob = 10 dB, SNR_Eve = 0 dB | C_B1 = 8.49 Mbps | C_B2 = 9.20 Mbps | C_E = 17.48 Mbps | BER_B1 = 4.9850e-01 | BER_B2 = 5.0450e-01 | BER_E = 5.0280e-01
+SNR_Bob = 10 dB, SNR_Eve = 2 dB | C_B1 = 8.64 Mbps | C_B2 = 9.17 Mbps | C_E = 17.26 Mbps | BER_B1 = 5.0030e-01 | BER_B2 = 5.1090e-01 | BER_E = 4.9820e-01
+SNR_Bob = 10 dB, SNR_Eve = 4 dB | C_B1 = 8.49 Mbps | C_B2 = 9.34 Mbps | C_E = 17.32 Mbps | BER_B1 = 4.9630e-01 | BER_B2 = 5.0540e-01 | BER_E = 5.0840e-01
+SNR_Bob = 10 dB, SNR_Eve = 6 dB | C_B1 = 8.51 Mbps | C_B2 = 9.14 Mbps | C_E = 17.39 Mbps | BER_B1 = 5.0670e-01 | BER_B2 = 5.0360e-01 | BER_E = 5.0750e-01
+SNR_Bob = 10 dB, SNR_Eve = 8 dB | C_B1 = 8.55 Mbps | C_B2 = 9.14 Mbps | C_E = 17.35 Mbps | BER_B1 = 4.9690e-01 | BER_B2 = 4.9770e-01 | BER_E = 5.0390e-01
+SNR_Bob = 10 dB, SNR_Eve = 10 dB | C_B1 = 8.60 Mbps | C_B2 = 9.30 Mbps | C_E = 17.20 Mbps | BER_B1 = 5.0110e-01 | BER_B2 = 4.9940e-01 | BER_E = 4.9890e-01
+SNR_Bob = 10 dB, SNR_Eve = 12 dB | C_B1 = 8.49 Mbps | C_B2 = 9.28 Mbps | C_E = 17.31 Mbps | BER_B1 = 5.0200e-01 | BER_B2 = 5.0430e-01 | BER_E = 5.0370e-01
+SNR_Bob = 10 dB, SNR_Eve = 14 dB | C_B1 = 8.51 Mbps | C_B2 = 9.24 Mbps | C_E = 17.48 Mbps | BER_B1 = 5.0080e-01 | BER_B2 = 5.0630e-01 | BER_E = 5.0340e-01
+SNR_Bob = 10 dB, SNR_Eve = 16 dB | C_B1 = 8.43 Mbps | C_B2 = 9.18 Mbps | C_E = 17.31 Mbps | BER_B1 = 4.9400e-01 | BER_B2 = 5.0610e-01 | BER_E = 5.0190e-01
+SNR_Bob = 10 dB, SNR_Eve = 18 dB | C_B1 = 8.46 Mbps | C_B2 = 9.23 Mbps | C_E = 17.59 Mbps | BER_B1 = 5.0440e-01 | BER_B2 = 5.0080e-01 | BER_E = 4.9930e-01
+SNR_Bob = 10 dB, SNR_Eve = 20 dB | C_B1 = 8.33 Mbps | C_B2 = 9.25 Mbps | C_E = 17.26 Mbps | BER_B1 = 5.0660e-01 | BER_B2 = 5.0670e-01 | BER_E = 4.9630e-01
+SNR_Bob = 12 dB, SNR_Eve = 0 dB | C_B1 = 11.10 Mbps | C_B2 = 12.31 Mbps | C_E = 21.82 Mbps | BER_B1 = 4.9440e-01 | BER_B2 = 4.8430e-01 | BER_E = 5.1260e-01
+SNR_Bob = 12 dB, SNR_Eve = 2 dB | C_B1 = 11.18 Mbps | C_B2 = 12.30 Mbps | C_E = 21.71 Mbps | BER_B1 = 4.9740e-01 | BER_B2 = 5.0080e-01 | BER_E = 5.0440e-01
+SNR_Bob = 12 dB, SNR_Eve = 4 dB | C_B1 = 11.09 Mbps | C_B2 = 12.33 Mbps | C_E = 21.98 Mbps | BER_B1 = 4.9280e-01 | BER_B2 = 5.0950e-01 | BER_E = 5.0010e-01
+SNR_Bob = 12 dB, SNR_Eve = 6 dB | C_B1 = 11.09 Mbps | C_B2 = 12.36 Mbps | C_E = 21.81 Mbps | BER_B1 = 5.0270e-01 | BER_B2 = 4.9880e-01 | BER_E = 4.9970e-01
+SNR_Bob = 12 dB, SNR_Eve = 8 dB | C_B1 = 11.02 Mbps | C_B2 = 12.39 Mbps | C_E = 21.75 Mbps | BER_B1 = 4.9790e-01 | BER_B2 = 5.0230e-01 | BER_E = 4.9970e-01
+SNR_Bob = 12 dB, SNR_Eve = 10 dB | C_B1 = 11.12 Mbps | C_B2 = 12.38 Mbps | C_E = 21.76 Mbps | BER_B1 = 4.9800e-01 | BER_B2 = 4.9880e-01 | BER_E = 4.9480e-01
+SNR_Bob = 12 dB, SNR_Eve = 12 dB | C_B1 = 11.00 Mbps | C_B2 = 12.28 Mbps | C_E = 21.74 Mbps | BER_B1 = 5.0370e-01 | BER_B2 = 5.0080e-01 | BER_E = 4.9470e-01
+SNR_Bob = 12 dB, SNR_Eve = 14 dB | C_B1 = 10.94 Mbps | C_B2 = 12.36 Mbps | C_E = 21.83 Mbps | BER_B1 = 4.9250e-01 | BER_B2 = 5.0460e-01 | BER_E = 4.9820e-01
+SNR_Bob = 12 dB, SNR_Eve = 16 dB | C_B1 = 11.14 Mbps | C_B2 = 12.35 Mbps | C_E = 21.68 Mbps | BER_B1 = 4.9570e-01 | BER_B2 = 4.9860e-01 | BER_E = 4.9260e-01
+SNR_Bob = 12 dB, SNR_Eve = 18 dB | C_B1 = 11.01 Mbps | C_B2 = 12.37 Mbps | C_E = 21.78 Mbps | BER_B1 = 4.8490e-01 | BER_B2 = 5.0160e-01 | BER_E = 5.0210e-01
+SNR_Bob = 12 dB, SNR_Eve = 20 dB | C_B1 = 10.99 Mbps | C_B2 = 12.32 Mbps | C_E = 21.78 Mbps | BER_B1 = 5.0140e-01 | BER_B2 = 5.0180e-01 | BER_E = 5.0310e-01
+SNR_Bob = 14 dB, SNR_Eve = 0 dB | C_B1 = 14.09 Mbps | C_B2 = 16.01 Mbps | C_E = 26.49 Mbps | BER_B1 = 5.0190e-01 | BER_B2 = 4.9300e-01 | BER_E = 5.0630e-01
+SNR_Bob = 14 dB, SNR_Eve = 2 dB | C_B1 = 13.99 Mbps | C_B2 = 15.94 Mbps | C_E = 26.85 Mbps | BER_B1 = 5.0110e-01 | BER_B2 = 5.0020e-01 | BER_E = 4.9670e-01
+SNR_Bob = 14 dB, SNR_Eve = 4 dB | C_B1 = 14.07 Mbps | C_B2 = 16.12 Mbps | C_E = 26.86 Mbps | BER_B1 = 5.0090e-01 | BER_B2 = 4.9350e-01 | BER_E = 5.0290e-01
+SNR_Bob = 14 dB, SNR_Eve = 6 dB | C_B1 = 14.16 Mbps | C_B2 = 16.09 Mbps | C_E = 26.63 Mbps | BER_B1 = 5.0260e-01 | BER_B2 = 4.9970e-01 | BER_E = 5.0250e-01
+SNR_Bob = 14 dB, SNR_Eve = 8 dB | C_B1 = 14.09 Mbps | C_B2 = 15.99 Mbps | C_E = 26.79 Mbps | BER_B1 = 5.0880e-01 | BER_B2 = 4.9960e-01 | BER_E = 5.0340e-01
+SNR_Bob = 14 dB, SNR_Eve = 10 dB | C_B1 = 14.02 Mbps | C_B2 = 16.07 Mbps | C_E = 26.64 Mbps | BER_B1 = 5.0250e-01 | BER_B2 = 4.9470e-01 | BER_E = 5.0400e-01
+SNR_Bob = 14 dB, SNR_Eve = 12 dB | C_B1 = 13.90 Mbps | C_B2 = 16.11 Mbps | C_E = 26.79 Mbps | BER_B1 = 4.9790e-01 | BER_B2 = 4.9140e-01 | BER_E = 4.9490e-01
+SNR_Bob = 14 dB, SNR_Eve = 14 dB | C_B1 = 13.94 Mbps | C_B2 = 15.99 Mbps | C_E = 26.68 Mbps | BER_B1 = 4.9460e-01 | BER_B2 = 4.9750e-01 | BER_E = 4.9310e-01
+SNR_Bob = 14 dB, SNR_Eve = 16 dB | C_B1 = 13.94 Mbps | C_B2 = 16.10 Mbps | C_E = 26.74 Mbps | BER_B1 = 4.9920e-01 | BER_B2 = 4.9860e-01 | BER_E = 4.9600e-01
+SNR_Bob = 14 dB, SNR_Eve = 18 dB | C_B1 = 14.04 Mbps | C_B2 = 16.01 Mbps | C_E = 26.63 Mbps | BER_B1 = 5.0160e-01 | BER_B2 = 5.0410e-01 | BER_E = 5.0230e-01
+SNR_Bob = 14 dB, SNR_Eve = 20 dB | C_B1 = 13.86 Mbps | C_B2 = 16.21 Mbps | C_E = 26.61 Mbps | BER_B1 = 4.9390e-01 | BER_B2 = 5.0020e-01 | BER_E = 5.0020e-01
+SNR_Bob = 16 dB, SNR_Eve = 0 dB | C_B1 = 17.04 Mbps | C_B2 = 20.33 Mbps | C_E = 31.95 Mbps | BER_B1 = 4.9560e-01 | BER_B2 = 5.0700e-01 | BER_E = 5.0270e-01
+SNR_Bob = 16 dB, SNR_Eve = 2 dB | C_B1 = 16.99 Mbps | C_B2 = 20.37 Mbps | C_E = 32.06 Mbps | BER_B1 = 5.0450e-01 | BER_B2 = 4.9600e-01 | BER_E = 5.0700e-01
+SNR_Bob = 16 dB, SNR_Eve = 4 dB | C_B1 = 17.25 Mbps | C_B2 = 20.46 Mbps | C_E = 32.39 Mbps | BER_B1 = 4.9830e-01 | BER_B2 = 5.1080e-01 | BER_E = 5.0140e-01
+SNR_Bob = 16 dB, SNR_Eve = 6 dB | C_B1 = 17.15 Mbps | C_B2 = 20.31 Mbps | C_E = 32.11 Mbps | BER_B1 = 4.9810e-01 | BER_B2 = 5.0470e-01 | BER_E = 5.0330e-01
+SNR_Bob = 16 dB, SNR_Eve = 8 dB | C_B1 = 17.15 Mbps | C_B2 = 20.48 Mbps | C_E = 32.11 Mbps | BER_B1 = 5.0640e-01 | BER_B2 = 4.9840e-01 | BER_E = 5.0090e-01
+SNR_Bob = 16 dB, SNR_Eve = 10 dB | C_B1 = 17.05 Mbps | C_B2 = 20.46 Mbps | C_E = 31.97 Mbps | BER_B1 = 5.0830e-01 | BER_B2 = 4.9660e-01 | BER_E = 4.9900e-01
+SNR_Bob = 16 dB, SNR_Eve = 12 dB | C_B1 = 17.14 Mbps | C_B2 = 20.60 Mbps | C_E = 31.91 Mbps | BER_B1 = 4.9950e-01 | BER_B2 = 4.9440e-01 | BER_E = 4.9580e-01
+SNR_Bob = 16 dB, SNR_Eve = 14 dB | C_B1 = 16.88 Mbps | C_B2 = 20.34 Mbps | C_E = 32.00 Mbps | BER_B1 = 4.9640e-01 | BER_B2 = 5.0430e-01 | BER_E = 5.1290e-01
+SNR_Bob = 16 dB, SNR_Eve = 16 dB | C_B1 = 17.06 Mbps | C_B2 = 20.35 Mbps | C_E = 32.26 Mbps | BER_B1 = 5.0180e-01 | BER_B2 = 4.9310e-01 | BER_E = 5.0030e-01
+SNR_Bob = 16 dB, SNR_Eve = 18 dB | C_B1 = 17.02 Mbps | C_B2 = 20.33 Mbps | C_E = 32.15 Mbps | BER_B1 = 4.9040e-01 | BER_B2 = 5.0510e-01 | BER_E = 5.0060e-01
+SNR_Bob = 16 dB, SNR_Eve = 20 dB | C_B1 = 16.94 Mbps | C_B2 = 20.35 Mbps | C_E = 31.94 Mbps | BER_B1 = 5.0190e-01 | BER_B2 = 5.0010e-01 | BER_E = 4.9300e-01
+SNR_Bob = 18 dB, SNR_Eve = 0 dB | C_B1 = 20.22 Mbps | C_B2 = 25.19 Mbps | C_E = 37.83 Mbps | BER_B1 = 4.9550e-01 | BER_B2 = 5.1040e-01 | BER_E = 4.9840e-01
+SNR_Bob = 18 dB, SNR_Eve = 2 dB | C_B1 = 20.24 Mbps | C_B2 = 25.08 Mbps | C_E = 37.71 Mbps | BER_B1 = 5.0060e-01 | BER_B2 = 5.0310e-01 | BER_E = 5.0270e-01
+SNR_Bob = 18 dB, SNR_Eve = 4 dB | C_B1 = 20.25 Mbps | C_B2 = 24.95 Mbps | C_E = 37.65 Mbps | BER_B1 = 5.0140e-01 | BER_B2 = 4.9410e-01 | BER_E = 5.0620e-01
+SNR_Bob = 18 dB, SNR_Eve = 6 dB | C_B1 = 20.15 Mbps | C_B2 = 24.90 Mbps | C_E = 37.78 Mbps | BER_B1 = 4.8930e-01 | BER_B2 = 5.0430e-01 | BER_E = 4.9620e-01
+SNR_Bob = 18 dB, SNR_Eve = 8 dB | C_B1 = 20.21 Mbps | C_B2 = 25.25 Mbps | C_E = 37.78 Mbps | BER_B1 = 5.0380e-01 | BER_B2 = 5.0060e-01 | BER_E = 5.0280e-01
+SNR_Bob = 18 dB, SNR_Eve = 10 dB | C_B1 = 20.31 Mbps | C_B2 = 25.16 Mbps | C_E = 37.62 Mbps | BER_B1 = 5.0520e-01 | BER_B2 = 5.0630e-01 | BER_E = 5.0530e-01
+SNR_Bob = 18 dB, SNR_Eve = 12 dB | C_B1 = 20.12 Mbps | C_B2 = 24.95 Mbps | C_E = 37.63 Mbps | BER_B1 = 4.9960e-01 | BER_B2 = 4.9700e-01 | BER_E = 5.0020e-01
+SNR_Bob = 18 dB, SNR_Eve = 14 dB | C_B1 = 20.20 Mbps | C_B2 = 25.03 Mbps | C_E = 37.57 Mbps | BER_B1 = 5.1090e-01 | BER_B2 = 5.0230e-01 | BER_E = 4.9400e-01
+SNR_Bob = 18 dB, SNR_Eve = 16 dB | C_B1 = 20.22 Mbps | C_B2 = 25.22 Mbps | C_E = 37.70 Mbps | BER_B1 = 4.9940e-01 | BER_B2 = 5.0150e-01 | BER_E = 5.0090e-01
+SNR_Bob = 18 dB, SNR_Eve = 18 dB | C_B1 = 20.13 Mbps | C_B2 = 25.00 Mbps | C_E = 37.70 Mbps | BER_B1 = 4.9780e-01 | BER_B2 = 5.0580e-01 | BER_E = 4.9750e-01
+SNR_Bob = 18 dB, SNR_Eve = 20 dB | C_B1 = 19.96 Mbps | C_B2 = 25.00 Mbps | C_E = 37.52 Mbps | BER_B1 = 4.9440e-01 | BER_B2 = 5.0340e-01 | BER_E = 4.9170e-01
+SNR_Bob = 20 dB, SNR_Eve = 0 dB | C_B1 = 23.20 Mbps | C_B2 = 30.28 Mbps | C_E = 43.52 Mbps | BER_B1 = 5.0520e-01 | BER_B2 = 4.9870e-01 | BER_E = 5.0960e-01
+SNR_Bob = 20 dB, SNR_Eve = 2 dB | C_B1 = 23.24 Mbps | C_B2 = 30.30 Mbps | C_E = 43.73 Mbps | BER_B1 = 4.9160e-01 | BER_B2 = 5.0260e-01 | BER_E = 5.0740e-01
+SNR_Bob = 20 dB, SNR_Eve = 4 dB | C_B1 = 23.32 Mbps | C_B2 = 30.32 Mbps | C_E = 43.46 Mbps | BER_B1 = 4.9980e-01 | BER_B2 = 5.0470e-01 | BER_E = 4.9970e-01
+SNR_Bob = 20 dB, SNR_Eve = 6 dB | C_B1 = 23.23 Mbps | C_B2 = 30.43 Mbps | C_E = 43.79 Mbps | BER_B1 = 5.0120e-01 | BER_B2 = 4.9750e-01 | BER_E = 4.9840e-01
+SNR_Bob = 20 dB, SNR_Eve = 8 dB | C_B1 = 23.20 Mbps | C_B2 = 30.40 Mbps | C_E = 43.25 Mbps | BER_B1 = 4.9290e-01 | BER_B2 = 5.0290e-01 | BER_E = 4.9740e-01
+SNR_Bob = 20 dB, SNR_Eve = 10 dB | C_B1 = 23.15 Mbps | C_B2 = 30.36 Mbps | C_E = 43.60 Mbps | BER_B1 = 4.8650e-01 | BER_B2 = 5.0610e-01 | BER_E = 4.9930e-01
+SNR_Bob = 20 dB, SNR_Eve = 12 dB | C_B1 = 23.25 Mbps | C_B2 = 30.33 Mbps | C_E = 43.54 Mbps | BER_B1 = 4.9100e-01 | BER_B2 = 5.0040e-01 | BER_E = 5.0670e-01
+SNR_Bob = 20 dB, SNR_Eve = 14 dB | C_B1 = 23.22 Mbps | C_B2 = 30.54 Mbps | C_E = 43.60 Mbps | BER_B1 = 5.0370e-01 | BER_B2 = 5.0560e-01 | BER_E = 4.9640e-01
+SNR_Bob = 20 dB, SNR_Eve = 16 dB | C_B1 = 23.27 Mbps | C_B2 = 30.57 Mbps | C_E = 43.76 Mbps | BER_B1 = 4.9890e-01 | BER_B2 = 4.9480e-01 | BER_E = 4.9660e-01
+SNR_Bob = 20 dB, SNR_Eve = 18 dB | C_B1 = 23.19 Mbps | C_B2 = 30.38 Mbps | C_E = 43.57 Mbps | BER_B1 = 5.0370e-01 | BER_B2 = 4.9900e-01 | BER_E = 5.0460e-01
+SNR_Bob = 20 dB, SNR_Eve = 20 dB | C_B1 = 23.09 Mbps | C_B2 = 30.42 Mbps | C_E = 43.72 Mbps | BER_B1 = 5.0620e-01 | BER_B2 = 4.9880e-01 | BER_E = 4.9410e-01

@@ -28,18 +28,21 @@ alpha = 3  # Hệ số suy hao kênh
 B = 10e6  # Băng thông (Hz)
 num_samples = int(1e4)  # Số lần mô phỏng Monte Carlo
 N_ant = 16  # Số anten (Massive MIMO)
-d_B1 = 50  # Khoảng cách Bob1 (m)
-d_B2 = 100  # Khoảng cách Bob2 (m)
-d_E = 70  # Khoảng cách Eve cố định (m)
+d_B1 = 30  # Khoảng cách Bob1 (m)
+d_B2 = 70  # Khoảng cách Bob2 (m)
+d_E = 50  # Khoảng cách Eve cố định (m)
 R_th = 1.0  # Ngưỡng bảo mật (bits/s/Hz), điều chỉnh theo tài liệu
 epsilon = 0.01  # Tỷ lệ lỗi SIC
-pilot_contamination_power = 0.2  # Công suất nhiễu pilot
+pilot_contamination_power = 0.0  # Công suất nhiễu pilot
 
 # Phân bổ công suất theo path loss
-alpha1_p = d_B1**alpha
-alpha2_p = d_B2**alpha
-alpha1 = alpha1_p / (alpha1_p + alpha2_p)
-alpha2 = alpha2_p / (alpha1_p + alpha2_p)
+#alpha1_p = d_B1**alpha
+#alpha2_p = d_B2**alpha
+#alpha1 = alpha1_p / (alpha1_p + alpha2_p)
+#alpha2 = alpha2_p / (alpha1_p + alpha2_p)
+alpha1 = 0.3
+alpha2 = 1-alpha1
+
 
 print("==== THÔNG SỐ HỆ THỐNG KỊCH BẢN 2 ====")
 print(f"Công suất truyền P_A: {P_A} W")
@@ -50,7 +53,7 @@ print(f"Số anten: {N_ant}")
 print(f"Khoảng cách: Bob1 = {d_B1}m, Bob2 = {d_B2}m, Eve = {d_E}m")
 print(f"Phân bổ công suất: alpha1 = {alpha1:.3f}, alpha2 = {alpha2:.3f} (tổng = {alpha1+alpha2:.3f})")
 print(f"Tỷ lệ lỗi SIC: epsilon = {epsilon}")
-print(f"Công suất nhiễu pilot: {pilot_contamination_power}")
+#print(f"Công suất nhiễu pilot: {pilot_contamination_power}")
 print("============================\n")
 
 # Quét SNR_Bob và SNR_Eve
@@ -98,8 +101,8 @@ for bob_idx, SNR_Bob_dB in enumerate(SNR_Bob_dB_range):
         h_B1 = h_B1 + pilot_contamination
         h_B2 = h_B2 + pilot_contamination
         
-        d_EB1 = abs(d_E - d_B1) + 1e-3
-        d_EB2 = abs(d_E - d_B2) + 1e-3
+        d_EB1 = max(abs(d_E - d_B1), 5.0)  # Khoảng cách tối thiểu 5m
+        d_EB2 = max(abs(d_E - d_B2), 5.0)  # Khoảng cách tối thiểu 5m
 
         # Tính SNR với numba
         SNR_B1, SNR_B2, SNR_E1, SNR_E2 = compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A_eff, alpha1, alpha2, N_0, P_E, d_B1, d_B2, d_E, d_EB1, d_EB2, epsilon, N_ant)
@@ -291,8 +294,8 @@ for idx, d_E in enumerate(d_E_range):
     h_B1 = h_B1 + pilot_contamination
     h_B2 = h_B2 + pilot_contamination
     
-    d_EB1 = abs(d_E - d_B1) + 1e-3
-    d_EB2 = max(abs(d_E - d_B2), 1)  # Điều chỉnh để tránh nhiễu
+    d_EB1 = max(abs(d_E - d_B1), 5.0)  # Khoảng cách tối thiểu 5m
+    d_EB2 = max(abs(d_E - d_B2), 5.0)  # Khoảng cách tối thiểu 5m
 
     # Tính SNR với numba
     SNR_B1, SNR_B2, SNR_E1, SNR_E2 = compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, N_0, SNR_Eve_linear * d_E**alpha * N_0, d_B1, d_B2, d_E, d_EB1, d_EB2, epsilon, N_ant)

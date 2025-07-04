@@ -1,0 +1,28 @@
+===== KỊCH BẢN 3: Multi-user NOMA, quét d_E (với AN) =====
+==== THÔNG SỐ HỆ THỐNG KỊCH BẢN 3 ====
+Công suất truyền P_A: 1 W
+Nhiễu nền N_0: 1.00e-15 W
+Hệ số suy hao alpha: 3
+Băng thông: 10.0 MHz
+Số anten: 16
+Khoảng cách: Bob1 = 30m, Bob2 = 70m, d_E = 20-150m (bước 10m)
+Phân bổ công suất: alpha1 = 0.300, alpha2 = 0.700 (tổng = 1.000)
+Tỷ lệ lỗi SIC: epsilon = 0.01
+SNR_Bob: 20 dB, SNR_Eve: 30 dB
+Tỷ lệ công suất AN: beta = 0.2
+============================
+
+d_E = 20 m | C_B1 = 54.55 Mbps | C_B2 = 345.53 Mbps | C_E = 19.26 Mbps | BER_B1 = 5.0140e-01 | BER_B2 = 5.0004e-01 | BER_E = 4.9890e-01 | R_s1 = 4.32 | R_s2 = 32.63 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.26e-06
+d_E = 30 m | C_B1 = 54.55 Mbps | C_B2 = 345.31 Mbps | C_E = 19.26 Mbps | BER_B1 = 5.0252e-01 | BER_B2 = 4.9921e-01 | BER_E = 4.9936e-01 | R_s1 = 4.32 | R_s2 = 32.61 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.26e-06
+d_E = 40 m | C_B1 = 54.55 Mbps | C_B2 = 344.10 Mbps | C_E = 19.26 Mbps | BER_B1 = 4.9817e-01 | BER_B2 = 4.9898e-01 | BER_E = 5.0300e-01 | R_s1 = 4.32 | R_s2 = 32.48 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.25e-06
+d_E = 50 m | C_B1 = 54.55 Mbps | C_B2 = 337.77 Mbps | C_E = 19.25 Mbps | BER_B1 = 4.9864e-01 | BER_B2 = 4.9963e-01 | BER_E = 4.9995e-01 | R_s1 = 4.32 | R_s2 = 31.85 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.19e-06
+d_E = 60 m | C_B1 = 54.55 Mbps | C_B2 = 311.27 Mbps | C_E = 19.21 Mbps | BER_B1 = 4.9802e-01 | BER_B2 = 5.0005e-01 | BER_E = 4.9837e-01 | R_s1 = 4.32 | R_s2 = 29.21 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 2.92e-06
+d_E = 70 m | C_B1 = 54.55 Mbps | C_B2 = 275.92 Mbps | C_E = 18.91 Mbps | BER_B1 = 4.9973e-01 | BER_B2 = 4.9706e-01 | BER_E = 5.0155e-01 | R_s1 = 4.32 | R_s2 = 25.70 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 2.57e-06
+d_E = 80 m | C_B1 = 54.55 Mbps | C_B2 = 299.63 Mbps | C_E = 19.21 Mbps | BER_B1 = 4.9939e-01 | BER_B2 = 4.9843e-01 | BER_E = 4.9906e-01 | R_s1 = 4.32 | R_s2 = 28.04 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 2.80e-06
+d_E = 90 m | C_B1 = 54.55 Mbps | C_B2 = 321.97 Mbps | C_E = 19.25 Mbps | BER_B1 = 5.0035e-01 | BER_B2 = 5.0117e-01 | BER_E = 4.9836e-01 | R_s1 = 4.32 | R_s2 = 30.27 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.03e-06
+d_E = 100 m | C_B1 = 54.55 Mbps | C_B2 = 331.27 Mbps | C_E = 19.26 Mbps | BER_B1 = 4.9997e-01 | BER_B2 = 4.9956e-01 | BER_E = 4.9753e-01 | R_s1 = 4.32 | R_s2 = 31.20 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.12e-06
+d_E = 110 m | C_B1 = 54.55 Mbps | C_B2 = 335.90 Mbps | C_E = 19.26 Mbps | BER_B1 = 4.9969e-01 | BER_B2 = 4.9755e-01 | BER_E = 5.0120e-01 | R_s1 = 4.32 | R_s2 = 31.66 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.17e-06
+d_E = 120 m | C_B1 = 54.55 Mbps | C_B2 = 338.47 Mbps | C_E = 19.26 Mbps | BER_B1 = 5.0022e-01 | BER_B2 = 5.0223e-01 | BER_E = 5.0103e-01 | R_s1 = 4.32 | R_s2 = 31.92 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.19e-06
+d_E = 130 m | C_B1 = 54.55 Mbps | C_B2 = 340.04 Mbps | C_E = 19.26 Mbps | BER_B1 = 4.9923e-01 | BER_B2 = 5.0209e-01 | BER_E = 4.9955e-01 | R_s1 = 4.32 | R_s2 = 32.08 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.21e-06
+d_E = 140 m | C_B1 = 54.55 Mbps | C_B2 = 341.03 Mbps | C_E = 19.26 Mbps | BER_B1 = 4.9928e-01 | BER_B2 = 5.0078e-01 | BER_E = 4.9949e-01 | R_s1 = 4.32 | R_s2 = 32.18 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.22e-06
+d_E = 150 m | C_B1 = 54.55 Mbps | C_B2 = 341.75 Mbps | C_E = 19.26 Mbps | BER_B1 = 5.0118e-01 | BER_B2 = 5.0384e-01 | BER_E = 5.0053e-01 | R_s1 = 4.32 | R_s2 = 32.25 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.32e-07 | eta_s2 = 3.22e-06

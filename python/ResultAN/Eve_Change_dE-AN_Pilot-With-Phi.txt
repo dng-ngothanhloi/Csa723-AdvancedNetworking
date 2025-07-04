@@ -1,0 +1,33 @@
+
+===== KỊCH BẢN 3: Multi-user NOMA, quét d_E (Eve chủ động gây nhiễu) =====
+==== THÔNG SỐ HỆ THỐNG KỊCH BẢN 3 ====
+Công suất truyền P_A: 1 W
+Nhiễu nền N_0: 1.00e-15 W
+Hệ số suy hao alpha: 3
+Băng thông: 10.0 MHz
+Số anten: 16
+Khoảng cách: Bob1 = 30m, Bob2 = 70m, d_E = 20-150m (bước 10m)
+Phân bổ công suất: alpha1 = 0.300, alpha2 = 0.700 (tổng = 1.000)
+Tỷ lệ lỗi SIC: epsilon = 0.005
+SNR_Bob: 20 dB, SNR_Eve: 30 dB
+Công suất nhiễu pilot: 0.0
+Tỷ lệ công suất AN: phi = [0.3]
+Ràng buộc khoảng cách: min(|d_Bi - d_E|) >= 5 m
+============================
+
+d_E = 20 m, phi = 0.3 | C_B1 = 51.36 Mbps | C_B2 = 59.22 Mbps | C_E = 110.08 Mbps | BER_B1 = 4.9795e-01 | BER_B2 = 5.0134e-01 | BER_E = 4.9994e-01 | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 0.00e+00 | eta_s2 = 0.00e+00
+Adjusted d_E from 30 to 35 to satisfy min(|d_B1 - d_E|) >= 5 m
+d_E = 35 m, phi = 0.3 | C_B1 = 14.06 Mbps | C_B2 = 58.62 Mbps | C_E = 88.61 Mbps | BER_B1 = 5.0048e-01 | BER_B2 = 5.0098e-01 | BER_E = 5.0065e-01 | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 0.00e+00 | eta_s2 = 0.00e+00
+d_E = 40 m, phi = 0.3 | C_B1 = 31.44 Mbps | C_B2 = 57.79 Mbps | C_E = 82.89 Mbps | BER_B1 = 4.9885e-01 | BER_B2 = 4.9739e-01 | BER_E = 4.9951e-01 | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 0.00e+00 | eta_s2 = 0.00e+00
+d_E = 50 m, phi = 0.3 | C_B1 = 46.04 Mbps | C_B2 = 51.62 Mbps | C_E = 73.05 Mbps | BER_B1 = 4.9590e-01 | BER_B2 = 5.0007e-01 | BER_E = 5.0165e-01 | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 1.16e-11 | eta_s2 = 1.77e-13
+d_E = 60 m, phi = 0.3 | C_B1 = 51.35 Mbps | C_B2 = 27.21 Mbps | C_E = 63.25 Mbps | BER_B1 = 5.0092e-01 | BER_B2 = 4.9889e-01 | BER_E = 5.0042e-01 | R_s1 = 0.08 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 0.71 | IP2 = 1.00 | eta_s1 = 8.21e-09 | eta_s2 = 0.00e+00
+Adjusted d_E from 70 to 75 to satisfy min(|d_B2 - d_E|) >= 5 m
+d_E = 75 m, phi = 0.3 | C_B1 = 54.61 Mbps | C_B2 = 4.94 Mbps | C_E = 48.05 Mbps | BER_B1 = 5.0036e-01 | BER_B2 = 4.9944e-01 | BER_E = 4.9780e-01 | R_s1 = 1.01 | R_s2 = 0.00 | SOP1 = 0.49 | SOP2 = 1.00 | IP1 = 0.01 | IP2 = 1.00 | eta_s1 = 1.01e-07 | eta_s2 = 0.00e+00
+d_E = 80 m, phi = 0.3 | C_B1 = 55.19 Mbps | C_B2 = 18.16 Mbps | C_E = 52.49 Mbps | BER_B1 = 5.0120e-01 | BER_B2 = 4.9906e-01 | BER_E = 5.0133e-01 | R_s1 = 1.33 | R_s2 = 0.00 | SOP1 = 0.20 | SOP2 = 1.00 | IP1 = 0.00 | IP2 = 1.00 | eta_s1 = 1.33e-07 | eta_s2 = 0.00e+00
+d_E = 90 m, phi = 0.3 | C_B1 = 56.05 Mbps | C_B2 = 36.65 Mbps | C_E = 48.56 Mbps | BER_B1 = 4.9856e-01 | BER_B2 = 5.0215e-01 | BER_E = 5.0111e-01 | R_s1 = 1.89 | R_s2 = 0.00 | SOP1 = 0.01 | SOP2 = 1.00 | IP1 = 0.00 | IP2 = 0.98 | eta_s1 = 1.89e-07 | eta_s2 = 3.47e-10
+d_E = 100 m, phi = 0.3 | C_B1 = 56.61 Mbps | C_B2 = 45.38 Mbps | C_E = 44.27 Mbps | BER_B1 = 5.0131e-01 | BER_B2 = 5.0120e-01 | BER_E = 4.9763e-01 | R_s1 = 2.36 | R_s2 = 0.28 | SOP1 = 0.00 | SOP2 = 0.95 | IP1 = 0.00 | IP2 = 0.42 | eta_s1 = 2.36e-07 | eta_s2 = 2.75e-08
+d_E = 110 m, phi = 0.3 | C_B1 = 57.03 Mbps | C_B2 = 49.83 Mbps | C_E = 40.40 Mbps | BER_B1 = 4.9649e-01 | BER_B2 = 4.9897e-01 | BER_E = 4.9892e-01 | R_s1 = 2.77 | R_s2 = 0.95 | SOP1 = 0.00 | SOP2 = 0.54 | IP1 = 0.00 | IP2 = 0.04 | eta_s1 = 2.77e-07 | eta_s2 = 9.51e-08
+d_E = 120 m, phi = 0.3 | C_B1 = 57.33 Mbps | C_B2 = 52.31 Mbps | C_E = 36.88 Mbps | BER_B1 = 5.0112e-01 | BER_B2 = 4.9732e-01 | BER_E = 4.9917e-01 | R_s1 = 3.12 | R_s2 = 1.54 | SOP1 = 0.00 | SOP2 = 0.14 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 3.12e-07 | eta_s2 = 1.54e-07
+d_E = 130 m, phi = 0.3 | C_B1 = 57.57 Mbps | C_B2 = 53.82 Mbps | C_E = 33.76 Mbps | BER_B1 = 5.0153e-01 | BER_B2 = 5.0088e-01 | BER_E = 4.9915e-01 | R_s1 = 3.43 | R_s2 = 2.01 | SOP1 = 0.00 | SOP2 = 0.02 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 3.43e-07 | eta_s2 = 2.01e-07
+d_E = 140 m, phi = 0.3 | C_B1 = 57.75 Mbps | C_B2 = 54.82 Mbps | C_E = 30.86 Mbps | BER_B1 = 5.0153e-01 | BER_B2 = 4.9977e-01 | BER_E = 4.9773e-01 | R_s1 = 3.70 | R_s2 = 2.40 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 3.70e-07 | eta_s2 = 2.40e-07
+d_E = 150 m, phi = 0.3 | C_B1 = 57.90 Mbps | C_B2 = 55.49 Mbps | C_E = 28.29 Mbps | BER_B1 = 5.0165e-01 | BER_B2 = 4.9905e-01 | BER_E = 4.9864e-01 | R_s1 = 3.93 | R_s2 = 2.72 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 3.93e-07 | eta_s2 = 2.72e-07

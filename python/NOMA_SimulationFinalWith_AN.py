@@ -1,4 +1,3 @@
-## Added AN for NOMAImprovementTwoUserFinal.py by Grok3
 import numpy as np
 import matplotlib.pyplot as plt
 from numba import jit
@@ -13,10 +12,10 @@ def compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, phi, N_0, P_
     norm_h_E = np.sum(np.abs(h_E)**2, axis=1)
     norm_h_EB1 = np.sum(np.abs(h_EB1)**2, axis=1)
     norm_h_EB2 = np.sum(np.abs(h_EB2)**2, axis=1)
-    
+
     # Công suất tín hiệu sau khi trừ công suất AN
     P_s = P_A * (1 - phi)
-    
+
     # SNR với AN
     SNR_B2 = (P_s * alpha2 * norm_h_B2) / (d_B2**alpha * N_0 + P_E * norm_h_EB2 / d_EB2**alpha)
     SNR_B1 = (P_s * alpha1 * norm_h_B1) / (d_B1**alpha * N_0 + epsilon * P_s * alpha2 * norm_h_B1 + P_E * norm_h_EB1 / d_EB1**alpha)
@@ -32,21 +31,19 @@ P_A = 1  # Công suất truyền tổng (W) ~ 30 dBm
 N_0 = 1e-15  # Nhiễu nền (W)
 alpha = 3  # Hệ số suy hao kênh
 B = 10e6  # Băng thông (Hz)
-num_samples = int(1e4)  # Số lần mô phỏng Monte Carlo
+num_samples = int(1e5)  # Số lần mô phỏng Monte Carlo
 N_ant = 16  # Số anten (Massive MIMO)
-d_B1 = 50  # Khoảng cách Bob1 (m)
-d_B2 = 100  # Khoảng cách Bob2 (m)
-d_E = 70  # Khoảng cách Eve cố định (m)
+d_B1 = 30  # Khoảng cách Bob1 (m)
+d_B2 = 70  # Khoảng cách Bob2 (m)
+d_E = 50  # Khoảng cách Eve cố định (m)
 R_th = 1.0  # Ngưỡng bảo mật (bits/s/Hz)
-epsilon = 0.01  # Tỷ lệ lỗi SIC
-pilot_contamination_power = 0.2  # Công suất nhiễu pilot
-phi_values = [0.0, 0.1, 0.2, 0.3]  # Tỷ lệ công suất AN
+epsilon = 0.005  # Tỷ lệ lỗi SIC
+pilot_contamination_power = 0.0  # Công suất nhiễu pilot - loại bỏ Nhiễu Định vị của EVE
+phi_values = [0.3]  # Tỷ lệ công suất AN
 
-# Phân bổ công suất theo path loss
-alpha1_p = d_B1**alpha
-alpha2_p = d_B2**alpha
-alpha1 = alpha1_p / (alpha1_p + alpha2_p)
-alpha2 = alpha2_p / (alpha1_p + alpha2_p)
+# Phân bổ công suất
+alpha1 = 0.3
+alpha2 = 1 - alpha1
 
 print("==== THÔNG SỐ HỆ THỐNG KỊCH BẢN 2 ====")
 print(f"Công suất truyền P_A: {P_A} W")
@@ -101,12 +98,12 @@ for phi_idx, phi in enumerate(phi_values):
             h_E = np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
             h_EB1 = np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
             h_EB2 = np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
-            
+
             # Thêm ô nhiễm định vị
             pilot_contamination = pilot_contamination_power * np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
             h_B1 = h_B1 + pilot_contamination
             h_B2 = h_B2 + pilot_contamination
-            
+
             d_EB1 = abs(d_E - d_B1) + 1e-3
             d_EB2 = max(abs(d_E - d_B2), 1)
 
@@ -155,9 +152,10 @@ for phi_idx, phi in enumerate(phi_values):
             bits = np.random.randint(0, 2, num_samples)
             tx_signal = 2 * bits - 1
             P_s = P_A_eff * (1 - phi)
+            norm_h_E = np.sum(np.abs(h_E)**2, axis=1)  # Tính norm_h_E cho nhiễu AN
             rx_signal_B1 = np.sqrt(P_s * alpha1) * np.sum(h_B1, axis=1) * tx_signal + np.sqrt(epsilon * P_s * alpha2) * np.sum(h_B1, axis=1) * tx_signal + np.sqrt(P_E / d_EB1**alpha) * np.sum(h_EB1, axis=1) * tx_signal + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
             rx_signal_B2 = np.sqrt(P_s * alpha2) * np.sum(h_B2, axis=1) * tx_signal + np.sqrt(P_E / d_EB2**alpha) * np.sum(h_EB2, axis=1) * tx_signal + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
-            rx_signal_E = np.sqrt(P_s * alpha1) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_s * alpha2) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_A_eff * phi) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
+            rx_signal_E = np.sqrt(P_s * alpha1) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_s * alpha2) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_A_eff * phi * norm_h_E / d_E**alpha) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples)) + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
             rx_bits_B1 = (rx_signal_B1.real > 0).astype(int)
             rx_bits_B2 = (rx_signal_B2.real > 0).astype(int)
             rx_bits_E = (rx_signal_E.real > 0).astype(int)
@@ -195,6 +193,7 @@ plt.title('Secrecy Rate vs SNR_Eve (SNR_Bob = 20 dB)')
 plt.legend()
 plt.grid(True)
 plt.savefig('scenario_2_rs1_rs2_an.png')
+plt.show()
 plt.close()
 
 plt.figure(figsize=(8, 6))
@@ -207,6 +206,7 @@ plt.title('Secrecy Outage Probability vs SNR_Eve (SNR_Bob = 20 dB)')
 plt.legend()
 plt.grid(True)
 plt.savefig('scenario_2_sop1_sop2_an.png')
+plt.show()
 plt.close()
 
 plt.figure(figsize=(8, 6))
@@ -219,6 +219,7 @@ plt.title('Intercept Probability vs SNR_Eve (SNR_Bob = 20 dB)')
 plt.legend()
 plt.grid(True)
 plt.savefig('scenario_2_ip1_ip2_an.png')
+plt.show()
 plt.close()
 
 plt.figure(figsize=(8, 6))
@@ -232,6 +233,7 @@ plt.title('BER vs SNR_Eve (SNR_Bob = 20 dB)')
 plt.legend()
 plt.grid(True, which='both')
 plt.savefig('scenario_2_ber_b1_b2_e_an.png')
+plt.show()
 plt.close()
 
 plt.figure(figsize=(8, 6))
@@ -244,6 +246,7 @@ plt.title('Secrecy Spectral Efficiency vs SNR_Eve (SNR_Bob = 20 dB)')
 plt.legend()
 plt.grid(True)
 plt.savefig('scenario_2_eta_s1_s2_an.png')
+plt.show()
 plt.close()
 
 # KỊCH BẢN 3: Multi-user NOMA, quét d_E (Eve chủ động gây nhiễu)
@@ -255,6 +258,7 @@ SNR_Bob_linear = 10**(SNR_Bob_dB / 10)
 SNR_Eve_linear = 10**(SNR_Eve_dB / 10)
 P_A_eff = SNR_Bob_linear * d_B1**alpha * N_0
 num_samples = int(1e5)  # Đồng bộ với mã gốc
+min_distance = 5  # Ràng buộc khoảng cách tối thiểu
 
 print("==== THÔNG SỐ HỆ THỐNG KỊCH BẢN 3 ====")
 print(f"Công suất truyền P_A: {P_A} W")
@@ -268,6 +272,7 @@ print(f"Tỷ lệ lỗi SIC: epsilon = {epsilon}")
 print(f"SNR_Bob: {SNR_Bob_dB} dB, SNR_Eve: {SNR_Eve_dB} dB")
 print(f"Công suất nhiễu pilot: {pilot_contamination_power}")
 print(f"Tỷ lệ công suất AN: phi = {phi_values}")
+print(f"Ràng buộc khoảng cách: min(|d_Bi - d_E|) >= {min_distance} m")
 print("============================\n")
 
 # Khởi tạo mảng kết quả cho Kịch bản 3
@@ -293,6 +298,14 @@ eta_s2_3 = np.zeros((len(d_E_range), len(phi_values)))
 
 for phi_idx, phi in enumerate(phi_values):
     for idx, d_E in enumerate(d_E_range):
+        # Áp dụng ràng buộc min(|d_Bi - d_E|) >= 5 m
+        if abs(d_E - d_B1) < min_distance:
+            d_E = d_B1 + min_distance
+            print(f"Adjusted d_E from {d_E_range[idx]} to {d_E} to satisfy min(|d_B1 - d_E|) >= {min_distance} m")
+        if abs(d_E - d_B2) < min_distance:
+            d_E = d_B2 + min_distance
+            print(f"Adjusted d_E from {d_E_range[idx]} to {d_E} to satisfy min(|d_B2 - d_E|) >= {min_distance} m")
+
         P_E = SNR_Eve_linear * d_E**alpha * N_0
 
         # Kênh fading với Massive MIMO
@@ -301,12 +314,12 @@ for phi_idx, phi in enumerate(phi_values):
         h_E = np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
         h_EB1 = np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
         h_EB2 = np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
-        
+
         # Thêm ô nhiễm định vị
         pilot_contamination = pilot_contamination_power * np.sqrt(0.5) * (np.random.randn(num_samples, N_ant) + 1j * np.random.randn(num_samples, N_ant))
         h_B1 = h_B1 + pilot_contamination
         h_B2 = h_B2 + pilot_contamination
-        
+
         d_EB1 = abs(d_E - d_B1) + 1e-3
         d_EB2 = max(abs(d_E - d_B2), 1)
 
@@ -355,9 +368,10 @@ for phi_idx, phi in enumerate(phi_values):
         bits = np.random.randint(0, 2, num_samples)
         tx_signal = 2 * bits - 1
         P_s = P_A_eff * (1 - phi)
+        norm_h_E = np.sum(np.abs(h_E)**2, axis=1)
         rx_signal_B1 = np.sqrt(P_s * alpha1) * np.sum(h_B1, axis=1) * tx_signal + np.sqrt(epsilon * P_s * alpha2) * np.sum(h_B1, axis=1) * tx_signal + np.sqrt(P_E / d_EB1**alpha) * np.sum(h_EB1, axis=1) * tx_signal + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
         rx_signal_B2 = np.sqrt(P_s * alpha2) * np.sum(h_B2, axis=1) * tx_signal + np.sqrt(P_E / d_EB2**alpha) * np.sum(h_EB2, axis=1) * tx_signal + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
-        rx_signal_E = np.sqrt(P_s * alpha1) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_s * alpha2) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_A_eff * phi) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
+        rx_signal_E = np.sqrt(P_s * alpha1) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_s * alpha2) * np.sum(h_E, axis=1) * tx_signal + np.sqrt(P_A_eff * phi * norm_h_E / d_E**alpha) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples)) + np.sqrt(N_0) * (np.random.randn(num_samples) + 1j * np.random.randn(num_samples))
         rx_bits_B1 = (rx_signal_B1.real > 0).astype(int)
         rx_bits_B2 = (rx_signal_B2.real > 0).astype(int)
         rx_bits_E = (rx_signal_E.real > 0).astype(int)

@@ -1,0 +1,17 @@
+===== KỊCH BẢN 3: Multi-user NOMA, quét d_E =====
+d_E = 20 m | alpha1 = 0.3498, alpha2 = 0.3502, phi = 0.3000 | C_B1 = 56.74 Mbps | C_B2 = 49.46 Mbps | C_E = 100.10 Mbps | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 0.00e+00 | eta_s2 = 0.00e+00
+Adjusted d_E from 30 to 35 to satisfy min(|d_B1 - d_E|) >= 5 m
+d_E = 35 m | alpha1 = 0.3502, alpha2 = 0.3498, phi = 0.3000 | C_B1 = 15.56 Mbps | C_B2 = 48.88 Mbps | C_E = 78.75 Mbps | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 0.00e+00 | eta_s2 = 0.00e+00
+d_E = 40 m | alpha1 = 0.3500, alpha2 = 0.3500, phi = 0.3000 | C_B1 = 34.05 Mbps | C_B2 = 48.05 Mbps | C_E = 73.20 Mbps | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 1.00 | IP2 = 1.00 | eta_s1 = 0.00e+00 | eta_s2 = 0.00e+00
+d_E = 50 m | alpha1 = 0.3500, alpha2 = 0.3500, phi = 0.3000 | C_B1 = 50.31 Mbps | C_B2 = 42.03 Mbps | C_E = 63.72 Mbps | R_s1 = 0.00 | R_s2 = 0.00 | SOP1 = 1.00 | SOP2 = 1.00 | IP1 = 0.99 | IP2 = 1.00 | eta_s1 = 1.17e-10 | eta_s2 = 4.74e-13
+d_E = 60 m | alpha1 = 0.3501, alpha2 = 0.3499, phi = 0.3000 | C_B1 = 56.74 Mbps | C_B2 = 19.31 Mbps | C_E = 55.99 Mbps | R_s1 = 0.24 | R_s2 = 0.00 | SOP1 = 0.97 | SOP2 = 1.00 | IP1 = 0.44 | IP2 = 1.00 | eta_s1 = 2.38e-08 | eta_s2 = 0.00e+00
+Adjusted d_E from 70 to 75 to satisfy min(|d_B2 - d_E|) >= 5 m
+d_E = 75 m | alpha1 = 0.3496, alpha2 = 0.3504, phi = 0.3000 | C_B1 = 60.92 Mbps | C_B2 = 2.69 Mbps | C_E = 46.60 Mbps | R_s1 = 1.43 | R_s2 = 0.00 | SOP1 = 0.17 | SOP2 = 1.00 | IP1 = 0.00 | IP2 = 1.00 | eta_s1 = 1.43e-07 | eta_s2 = 0.00e+00
+d_E = 80 m | alpha1 = 0.3501, alpha2 = 0.3499, phi = 0.3000 | C_B1 = 61.76 Mbps | C_B2 = 11.84 Mbps | C_E = 43.96 Mbps | R_s1 = 1.78 | R_s2 = 0.00 | SOP1 = 0.04 | SOP2 = 1.00 | IP1 = 0.00 | IP2 = 1.00 | eta_s1 = 1.78e-07 | eta_s2 = 0.00e+00
+d_E = 90 m | alpha1 = 0.3499, alpha2 = 0.3501, phi = 0.3000 | C_B1 = 62.92 Mbps | C_B2 = 27.77 Mbps | C_E = 39.16 Mbps | R_s1 = 2.38 | R_s2 = 0.00 | SOP1 = 0.00 | SOP2 = 1.00 | IP1 = 0.00 | IP2 = 0.98 | eta_s1 = 2.38e-07 | eta_s2 = 3.23e-10
+d_E = 100 m | alpha1 = 0.3498, alpha2 = 0.3502, phi = 0.3000 | C_B1 = 63.70 Mbps | C_B2 = 36.01 Mbps | C_E = 34.96 Mbps | R_s1 = 2.87 | R_s2 = 0.26 | SOP1 = 0.00 | SOP2 = 0.96 | IP1 = 0.00 | IP2 = 0.42 | eta_s1 = 2.87e-07 | eta_s2 = 2.62e-08
+d_E = 110 m | alpha1 = 0.3498, alpha2 = 0.3502, phi = 0.3000 | C_B1 = 64.29 Mbps | C_B2 = 40.29 Mbps | C_E = 31.28 Mbps | R_s1 = 3.30 | R_s2 = 0.91 | SOP1 = 0.00 | SOP2 = 0.58 | IP1 = 0.00 | IP2 = 0.04 | eta_s1 = 3.30e-07 | eta_s2 = 9.09e-08
+d_E = 120 m | alpha1 = 0.3499, alpha2 = 0.3501, phi = 0.3000 | C_B1 = 64.73 Mbps | C_B2 = 42.70 Mbps | C_E = 28.01 Mbps | R_s1 = 3.67 | R_s2 = 1.47 | SOP1 = 0.00 | SOP2 = 0.16 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 3.67e-07 | eta_s2 = 1.47e-07
+d_E = 130 m | alpha1 = 0.3503, alpha2 = 0.3497, phi = 0.3000 | C_B1 = 65.09 Mbps | C_B2 = 44.18 Mbps | C_E = 25.10 Mbps | R_s1 = 4.00 | R_s2 = 1.91 | SOP1 = 0.00 | SOP2 = 0.03 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.00e-07 | eta_s2 = 1.91e-07
+d_E = 140 m | alpha1 = 0.3498, alpha2 = 0.3502, phi = 0.3000 | C_B1 = 65.35 Mbps | C_B2 = 45.16 Mbps | C_E = 22.52 Mbps | R_s1 = 4.28 | R_s2 = 2.26 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.28e-07 | eta_s2 = 2.26e-07
+d_E = 150 m | alpha1 = 0.3500, alpha2 = 0.3500, phi = 0.3000 | C_B1 = 65.57 Mbps | C_B2 = 45.81 Mbps | C_E = 20.22 Mbps | R_s1 = 4.54 | R_s2 = 2.56 | SOP1 = 0.00 | SOP2 = 0.00 | IP1 = 0.00 | IP2 = 0.00 | eta_s1 = 4.54e-07 | eta_s2 = 2.56e-07

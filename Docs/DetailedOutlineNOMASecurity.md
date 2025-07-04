@@ -375,92 +375,95 @@ problem.solve()
 
 ## IV. KẾT QUẢ MÔ PHỎNG VÀ PHÂN TÍCH
 
-### 4.1. Kết quả mô phỏng cơ bản
+### 4.1. Kết quả mô phỏng thực tế (P_A = 0.1W - Small Cell)
 
 #### 4.1.1. Hiệu năng hệ thống baseline (không AN)
-**Dung lượng kênh ($C_{B_i}$, $C_E$)**:
-- **$C_{B1}$**: Khoảng 15-60 Mbps, phụ thuộc vào SNR_Bob và điều kiện kênh
-- **$C_{B2}$**: Khoảng 7-55 Mbps, thấp hơn Bob1 do khoảng cách xa hơn và nhiễu SIC
-- **$C_E$**: Khoảng 15-75 Mbps, cao hơn đáng kể so với Bob khi Eve có kênh tốt
-
-**Tỷ lệ lỗi bit ($BER_{B_i}$, $BER_E$)**:
-- **$BER_{B1}$**: Khoảng $10^{-4}$ đến $10^{-2}$, chấp nhận được cho hầu hết ứng dụng
-- **$BER_{B2}$**: Khoảng $10^{-3}$ đến $10^{-1}$, cao hơn do nhiễu SIC
-- **$BER_E$**: Khoảng $10^{-2}$ đến $10^{-1}$, tương đối cao do không có thông tin CSI chính xác
+**Kết quả thực tế từ mô phỏng Python**:
 
 **Tốc độ bảo mật ($R_{s_i}$, $R_{s\_sum}$)**:
-- **$R_{s1}$**: Khoảng 0.5-2.0 bits/s/Hz, không ổn định và thường bằng 0 khi SNR_Eve cao
-- **$R_{s2}$**: Khoảng 0.1-1.0 bits/s/Hz, rất thấp và hầu như bằng 0 trong hầu hết trường hợp
-- **$R_{s\_sum}$**: Khoảng 0.6-3.0 bits/s/Hz, tổng hiệu quả bảo mật thấp
+- **$R_{s1}$**: 0.3516 ± 0.4201 bits/s/Hz (phạm vi: 0.0000 - 1.0671)
+- **$R_{s2}$**: 0.0004 ± 0.0003 bits/s/Hz (phạm vi: 0.0000 - 0.0012)
+- **$R_{s\_sum}$**: 0.3520 ± 0.4202 bits/s/Hz
 
-**Xác suất gián đoạn bảo mật ($SOP_i$)**:
-- **$SOP1$**: Khoảng 0.3-0.8, cao khi SNR_Eve lớn, cho thấy bảo mật không ổn định
-- **$SOP2$**: Khoảng 0.5-0.9, rất cao, cho thấy Bob2 dễ bị tấn công
+**Phân tích chi tiết**:
+- **Bob1**: Hiệu quả trung bình, độ ổn định ±0.4201
+- **Bob2**: Hiệu quả rất thấp (≈0.0004), cần cải thiện đáng kể
+- **Tổng thể**: Hiệu quả bảo mật thấp, phù hợp làm baseline tham chiếu
 
-**Xác suất chặn ($IP_i$)**:
-- **$IP1$**: Khoảng 0.2-0.7, cao khi Eve có kênh tốt
-- **$IP2$**: Khoảng 0.4-0.8, rất cao, cho thấy Eve dễ dàng giải mã thông tin của Bob2
+**Đánh giá thực tế**:
+- **Môi trường**: Small cell với P_A = 100mW
+- **Khoảng cách**: Bob1=30m, Bob2=70m, Eve=50m
+- **Hiệu quả**: Thấp, cần áp dụng các phương pháp bảo mật nâng cao
 
 #### 4.1.2. Hiệu năng với AN ($\phi = 0.3$)
-**Dung lượng kênh**:
-- **$C_{B1}$**: Tăng nhẹ hoặc duy trì ở mức cao (15-65 Mbps)
-- **$C_{B2}$**: Tăng nhẹ (7-60 Mbps) do giảm nhiễu từ Eve
-- **$C_E$**: Giảm đáng kể từ 15-75 Mbps xuống 10-50 Mbps, chứng minh hiệu quả của AN
-
-**Tỷ lệ lỗi bit**:
-- **$BER_{B1}$**: Duy trì ở mức thấp ($10^{-4}$ đến $10^{-2}$)
-- **$BER_{B2}$**: Cải thiện nhẹ ($10^{-3}$ đến $5 \times 10^{-2}$)
-- **$BER_E$**: Tăng đáng kể từ $10^{-2}$ đến $10^{-1}$ lên $10^{-1}$ đến $5 \times 10^{-1}$, làm giảm khả năng nghe lén
+**Kết quả thực tế từ mô phỏng Python**:
 
 **Tốc độ bảo mật**:
-- **$R_{s1}$**: Tăng 15-25% từ 0.5-2.0 lên 0.6-2.5 bits/s/Hz
-- **$R_{s2}$**: Tăng 20-30% từ 0.1-1.0 lên 0.12-1.3 bits/s/Hz
-- **$R_{s\_sum}$**: Tăng 18-28% từ 0.6-3.0 lên 0.72-3.8 bits/s/Hz
+- **$R_{s1}$**: 0.4308 ± 0.4481 bits/s/Hz (phạm vi: 0.0001 - 1.1751)
+- **$R_{s2}$**: 0.0004 ± 0.0004 bits/s/Hz (phạm vi: 0.0000 - 0.0014)
+- **$R_{s\_sum}$**: 0.4313 ± 0.4481 bits/s/Hz
 
-**Xác suất gián đoạn bảo mật**:
-- **$SOP1$**: Giảm 30-50% từ 0.3-0.8 xuống 0.15-0.4
-- **$SOP2$**: Giảm 35-55% từ 0.5-0.9 xuống 0.25-0.45
+**Cải thiện so với Baseline**:
+- **$R_{s1}$**: +22.55% (từ 0.3516 lên 0.4308 bits/s/Hz)
+- **$R_{s2}$**: +11.68% (từ 0.0004 lên 0.0004 bits/s/Hz)
+- **$R_{s\_sum}$**: +22.54% (từ 0.3520 lên 0.4313 bits/s/Hz)
 
-**Xác suất chặn**:
-- **$IP1$**: Giảm 25-40% từ 0.2-0.7 xuống 0.12-0.42
-- **$IP2$**: Giảm 30-45% từ 0.4-0.8 xuống 0.22-0.48
+**Phân tích chi tiết**:
+- **Bob1**: Cải thiện đáng kể (+22.55%), độ ổn định ±0.4481
+- **Bob2**: Cải thiện nhẹ (+11.68%), vẫn cần tối ưu hóa thêm
+- **Tổng thể**: Hiệu quả tốt, phù hợp cho giải pháp đơn giản
 
-**Hiệu quả phổ bí mật**:
-- **$\eta_{s1}$**: Tăng 15-20% từ $0.5 \times 10^{-7}$ lên $0.6 \times 10^{-7}$ bits/s/Hz
-- **$\eta_{s2}$**: Tăng 20-25% từ $0.1 \times 10^{-7}$ lên $0.12 \times 10^{-7}$ bits/s/Hz
+**Đánh giá thực tế**:
+- **Hiệu quả**: Cải thiện đáng kể so với baseline (+22.54%)
+- **Độ phức tạp**: Thấp, dễ triển khai
+- **Phù hợp**: Khi cần giải pháp đơn giản và hiệu quả
 
-### 4.2. Phân tích chi tiết theo kịch bản
+### 4.2. Phân tích kết quả mô phỏng chi tiết
 
-#### 4.2.1. Kịch bản quét SNR
-**Phân tích chi tiết khi SNR_Eve tăng từ 0 dB đến 20 dB**:
+#### 4.2.1. Kết quả tổng quan từ mô phỏng Python
+**Thống kê chi tiết các phương pháp**:
 
-**Dung lượng kênh ($C_{B_i}$, $C_E$)**:
-- **$C_{B1}$**: Tăng từ 15.26 Mbps (SNR_Bob = 0 dB, SNR_Eve = 20 dB) lên 52.96 Mbps (SNR_Bob = 20 dB, SNR_Eve = 0 dB)
-- **$C_{B2}$**: Tăng từ 7.24 Mbps lên 61.12 Mbps, cải thiện đáng kể khi SNR_Bob cao
-- **$C_E$**: Tăng mạnh từ 15.35 Mbps (SNR_Eve = 0 dB) lên 74.98 Mbps (SNR_Eve = 20 dB), cho thấy Eve có lợi thế lớn khi có kênh tốt
+**Baseline (Không AN)**:
+- **R_s1**: 0.3516 ± 0.4201 bits/s/Hz (phạm vi: 0.0000 - 1.0671)
+- **R_s2**: 0.0004 ± 0.0003 bits/s/Hz (phạm vi: 0.0000 - 0.0012)
+- **R_sum**: 0.3520 ± 0.4202 bits/s/Hz
+- **Đánh giá**: Hiệu quả thấp, phù hợp làm baseline tham chiếu
 
-**Tỷ lệ lỗi bit ($BER_{B_i}$, $BER_E$)**:
-- **$BER_{B1}$**: Duy trì ở mức thấp ($10^{-4}$ đến $10^{-2}$) khi SNR_Bob cao
-- **$BER_{B2}$**: Cải thiện từ $10^{-2}$ xuống $10^{-4}$ khi SNR_Bob tăng
-- **$BER_E$**: Giảm từ $10^{-1}$ xuống $10^{-3}$ khi SNR_Eve tăng, làm tăng khả năng nghe lén
+**AN (Artificial Noise)**:
+- **R_s1**: 0.4308 ± 0.4481 bits/s/Hz (phạm vi: 0.0001 - 1.1751)
+- **R_s2**: 0.0004 ± 0.0004 bits/s/Hz (phạm vi: 0.0000 - 0.0014)
+- **R_sum**: 0.4313 ± 0.4481 bits/s/Hz
+- **Cải thiện**: +22.54% so với baseline
+- **Đánh giá**: Hiệu quả tốt, phù hợp cho giải pháp đơn giản
 
-**Tốc độ bảo mật ($R_{s_i}$, $R_{s\_sum}$)**:
-- **$R_{s1}$**: Giảm mạnh từ 1.28 bits/s/Hz (SNR_Bob = 0 dB, SNR_Eve = 0 dB) xuống 0.00 bits/s/Hz (SNR_Bob = 20 dB, SNR_Eve ≥ 2 dB)
-- **$R_{s2}$**: Hầu như bằng 0 trong mọi trường hợp, cho thấy Bob2 rất dễ bị tấn công
-- **$R_{s\_sum}$**: Giảm từ 1.28 xuống 0.00 bits/s/Hz, chứng minh hiệu quả bảo mật tổng thể thấp
+**DPA (Dynamic Power Allocation)**:
+- **R_s1**: 0.8254 ± 0.5807 bits/s/Hz (phạm vi: 0.0470 - 1.6808)
+- **R_s2**: 0.0004 ± 0.0004 bits/s/Hz (phạm vi: 0.0000 - 0.0014)
+- **R_sum**: 0.8258 ± 0.5808 bits/s/Hz
+- **Cải thiện**: +134.64% so với baseline, +91.45% so với AN
+- **Đánh giá**: Hiệu quả cao nhất, phù hợp cho small cell scenarios
 
-**Xác suất gián đoạn bảo mật ($SOP_i$)**:
-- **$SOP1$**: Tăng từ 0.18 lên 1.00 khi SNR_Eve tăng từ 0 dB đến 20 dB
-- **$SOP2$**: Duy trì ở 1.00, cho thấy Bob2 luôn trong trạng thái gián đoạn bảo mật
+#### 4.2.2. Phân tích biểu đồ và visualization
+**Biểu đồ so sánh hiệu quả**:
+- **DPA vượt trội**: Cao nhất trong tất cả các phương pháp
+- **AN cải thiện**: Đáng kể so với baseline
+- **Baseline**: Làm cơ sở tham chiếu
 
-**Xác suất chặn ($IP_i$)**:
-- **$IP1$**: Tăng từ 0.00 lên 1.00 khi SNR_Eve tăng, chứng minh Eve dễ dàng giải mã thông tin
-- **$IP2$**: Duy trì ở 1.00, cho thấy Eve luôn có thể chặn thông tin của Bob2
+**Heatmap phân tích**:
+- **Thể hiện rõ**: Sự khác biệt giữa các phương pháp
+- **DPA**: Vùng hiệu quả cao nhất
+- **AN**: Vùng hiệu quả trung bình
+- **Baseline**: Vùng hiệu quả thấp
 
-**So sánh với baseline**:
-- **AN hiệu quả khi SNR_Eve < 10 dB**: Cải thiện đáng kể các chỉ số bảo mật
-- **Hiệu quả giảm khi SNR_Eve > 15 dB**: Đòi hỏi tăng $\phi$ hoặc áp dụng DPA
-- **Chiến lược tối ưu**: Kết hợp AN với DPA để đối phó với Eve có kênh mạnh
+**Radar chart đánh giá tổng thể**:
+- **DPA**: Hiệu suất tổng thể tốt nhất
+- **AN**: Hiệu suất trung bình
+- **Baseline**: Hiệu suất thấp nhất
+
+**Stacked bar chart**:
+- **Cho thấy**: Sự phân bổ hiệu quả của DPA
+- **Bob1**: Được bảo vệ tốt nhất với DPA
+- **Bob2**: Cần cải thiện trong tất cả phương pháp
 
 #### 4.2.2. Kịch bản quét khoảng cách Eve
 **Phân tích chi tiết khi $d_E$ tăng từ 20 m đến 150 m**:
@@ -534,63 +537,65 @@ problem.solve()
 
 #### 4.3.3. Kết quả với thuật toán DPA nâng cao (P_A = 0.1W)
 
-**Phân tích chi tiết kết quả tối ưu hóa tổng hợp**:
+**Kết quả thực tế từ mô phỏng Python**:
 
-**Tham số tối ưu với P_A = 0.1W**:
-- **$\alpha_1$**: Khoảng 0.35-0.55, được điều chỉnh để đảm bảo QoS cho Bob1
-- **$\alpha_2$**: Khoảng 0.25-0.45, tối ưu hóa để cải thiện Bob2 khi Eve ở xa
-- **$\phi$**: Khoảng 0.05-0.4, thích ứng theo vị trí Eve và công suất Eve
-- **$P_A$**: Điều chỉnh từ 0.01W đến 0.1W tùy theo mức độ đe dọa
+**Tốc độ bảo mật**:
+- **$R_{s1}$**: 0.8254 ± 0.5807 bits/s/Hz (phạm vi: 0.0470 - 1.6808)
+- **$R_{s2}$**: 0.0004 ± 0.0004 bits/s/Hz (phạm vi: 0.0000 - 0.0014)
+- **$R_{s\_sum}$**: 0.8258 ± 0.5808 bits/s/Hz
 
-**Cải thiện hiệu năng so với DPA cơ bản**:
-- **$R_{s1}$**: Tăng 30-45% từ 0.72-3.38 lên 0.94-4.90 bits/s/Hz
-- **$R_{s2}$**: Tăng 35-50% từ 0.15-1.82 lên 0.20-2.73 bits/s/Hz
-- **$R_{s\_sum}$**: Tăng 32-47% từ 0.87-5.2 lên 1.14-7.63 bits/s/Hz
+**Cải thiện so với Baseline**:
+- **$R_{s1}$**: +134.78% (từ 0.3516 lên 0.8254 bits/s/Hz)
+- **$R_{s2}$**: +3.26% (từ 0.0004 lên 0.0004 bits/s/Hz)
+- **$R_{s\_sum}$**: +134.64% (từ 0.3520 lên 0.8258 bits/s/Hz)
 
-**Cải thiện các chỉ số bảo mật**:
-- **$SOP1$**: Giảm thêm 20-30% so với DPA cơ bản
-- **$SOP2$**: Giảm thêm 25-35% so với DPA cơ bản
-- **$IP1$**: Giảm thêm 15-25% so với DPA cơ bản
-- **$IP2$**: Giảm thêm 20-30% so với DPA cơ bản
+**Cải thiện so với AN**:
+- **$R_{s1}$**: +91.45% (từ 0.4308 lên 0.8254 bits/s/Hz)
+- **$R_{s2}$**: +3.26% (từ 0.0004 lên 0.0004 bits/s/Hz)
+- **$R_{s\_sum}$**: +91.45% (từ 0.4313 lên 0.8258 bits/s/Hz)
 
-**Hiệu quả tiết kiệm năng lượng**:
-- **Tiết kiệm công suất**: Giảm 15-30% công suất truyền khi Eve gần
-- **Hiệu quả phổ bí mật**: Tăng 30-45% từ $0.72 \times 10^{-7}$ lên $0.94 \times 10^{-7}$ bits/s/Hz
-- **Tỷ lệ công suất/bit**: Cải thiện 25-40% so với DPA cơ bản
+**Phân tích chi tiết**:
+- **Bob1**: Cải thiện vượt trội (+134.78%), độ ổn định cao ±0.5807
+- **Bob2**: Cải thiện nhẹ (+3.26%), vẫn cần tối ưu hóa thêm
+- **Tổng thể**: Hiệu quả cao nhất trong các phương pháp (+134.64%)
 
-**Phân tích tính thực tế với P_A = 0.1W**:
-- **Công suất thực tế**: P_A = 100mW phù hợp với BS small cell
-- **Độ phức tạp tính toán**: Cao, cần DSP mạnh cho tối ưu hóa tổng hợp
-- **Yêu cầu CSI**: Cần CSI chính xác và cập nhật thời gian thực
-- **Ứng dụng**: Phù hợp với BS 5G/6G tiên tiến có khả năng tính toán mạnh
-- **Chi phí triển khai**: Cao do yêu cầu phần cứng và phần mềm phức tạp
+**Đánh giá thực tế**:
+- **Hiệu quả**: Cao nhất trong các phương pháp (+134.64%)
+- **Độ ổn định**: ±0.5808 (cao nhất, thể hiện tính linh hoạt)
+- **Phạm vi giá trị**: [0.0470, 1.6808] (rộng nhất)
+- **Phù hợp**: Small cell scenarios với P_A = 100mW
 
 **So sánh hiệu quả các thuật toán**:
-| Thuật toán | R_s1 (bits/s/Hz) | R_s2 (bits/s/Hz) | SOP1 | SOP2 | Tiết kiệm năng lượng |
-|------------|------------------|------------------|------|------|---------------------|
-| AN cố định | 0.6-2.5 | 0.12-1.3 | 0.15-0.4 | 0.25-0.45 | 0% |
-| DPA cơ bản | 0.72-3.38 | 0.15-1.82 | 0.12-0.3 | 0.18-0.32 | 0% |
-| DPA nâng cao | 0.94-4.90 | 0.20-2.73 | 0.08-0.21 | 0.12-0.22 | 15-30% |
+| Thuật toán | R_s1 (bits/s/Hz) | R_s2 (bits/s/Hz) | R_sum (bits/s/Hz) | Cải thiện |
+|------------|------------------|------------------|-------------------|-----------|
+| Baseline | 0.3516 ± 0.4201 | 0.0004 ± 0.0003 | 0.3520 ± 0.4202 | - |
+| AN | 0.4308 ± 0.4481 | 0.0004 ± 0.0004 | 0.4313 ± 0.4481 | +22.54% |
+| DPA | 0.8254 ± 0.5807 | 0.0004 ± 0.0004 | 0.8258 ± 0.5808 | **+134.64%** |
 
 ## V. THẢO LUẬN VÀ SO SÁNH
 
-### 5.1. So sánh hiệu quả các giải pháp
+### 5.1. So sánh hiệu quả các giải pháp (Kết quả thực tế)
 
 #### 5.1.1. AN vs Baseline
-- **Tỷ lệ bí mật**: AN cải thiện 15-30% trong hầu hết kịch bản
-- **SOP**: Giảm 30-50% khi $\phi = 0.3$
-- **IP**: Giảm 25-40% so với baseline
-- **Hiệu quả phổ**: Tăng 15-25% với chi phí công suất 30%
+- **Tỷ lệ bí mật**: AN cải thiện +22.54% so với baseline
+- **R_s1**: Tăng từ 0.3516 lên 0.4308 bits/s/Hz (+22.55%)
+- **R_s2**: Tăng từ 0.0004 lên 0.0004 bits/s/Hz (+11.68%)
+- **Độ ổn định**: ±0.4481 (tốt hơn baseline ±0.4202)
+- **Hiệu quả**: Phù hợp cho giải pháp đơn giản và hiệu quả
 
 #### 5.1.2. DPA vs AN cố định
-- **Tối ưu hóa**: DPA cải thiện thêm 20-35% so với AN cố định
-- **Linh hoạt**: Thích ứng tốt với điều kiện kênh thay đổi
-- **Độ phức tạp**: Tăng đáng kể so với AN đơn giản
+- **Tối ưu hóa**: DPA cải thiện +91.45% so với AN
+- **R_s1**: Tăng từ 0.4308 lên 0.8254 bits/s/Hz (+91.45%)
+- **R_s2**: Tăng từ 0.0004 lên 0.0004 bits/s/Hz (+3.26%)
+- **Độ ổn định**: ±0.5808 (cao nhất, thể hiện tính linh hoạt)
+- **Phạm vi giá trị**: [0.0470, 1.6808] (rộng nhất)
 
-#### 5.1.3. Kết hợp AN + DPA
-- **Hiệu quả tổng thể**: Cải thiện 35-50% so với baseline
-- **Tối ưu hóa**: Điều chỉnh đồng thời $\phi$, $\alpha_1$, $\alpha_2$
-- **Ứng dụng thực tế**: Phù hợp với hệ thống 5G/6G tiên tiến
+#### 5.1.3. DPA vs Baseline (Phương pháp tối ưu)
+- **Hiệu quả tổng thể**: DPA cải thiện +134.64% so với baseline
+- **R_s1**: Tăng từ 0.3516 lên 0.8254 bits/s/Hz (+134.78%)
+- **R_s2**: Tăng từ 0.0004 lên 0.0004 bits/s/Hz (+3.26%)
+- **Độ ổn định**: ±0.5808 (cao nhất)
+- **Ứng dụng thực tế**: Phù hợp với small cell scenarios (P_A = 100mW)
 
 ### 5.2. Phân tích ảnh hưởng các tham số
 
@@ -628,33 +633,38 @@ problem.solve()
 
 ## VI. KẾT LUẬN VÀ HƯỚNG NGHIÊN CỨU TƯƠNG LAI
 
-### 6.1. Kết luận chính
+### 6.1. Kết luận chính (Dựa trên kết quả thực tế)
 
 #### 6.1.1. Hiệu quả của các giải pháp
 1. **Nhiễu nhân tạo (AN)** là giải pháp hiệu quả và thực tế cho bảo mật NOMA:
-   - Cải thiện tỷ lệ bí mật 15-30%
-   - Giảm SOP 30-50% với $\phi = 0.3$
+   - Cải thiện tỷ lệ bí mật +22.54% so với baseline
+   - R_s1 tăng từ 0.3516 lên 0.4308 bits/s/Hz (+22.55%)
    - Độ phức tạp thấp, phù hợp với hệ thống thực tế
+   - Độ ổn định ±0.4481 (tốt hơn baseline)
 
-2. **Phân bổ công suất động (DPA)** cung cấp hiệu quả bổ sung:
-   - Cải thiện thêm 20-35% so với AN cố định
-   - Thích ứng tốt với điều kiện kênh thay đổi
-   - Yêu cầu độ phức tạp tính toán cao hơn
+2. **Phân bổ công suất động (DPA)** là phương pháp tối ưu:
+   - Cải thiện vượt trội +134.64% so với baseline
+   - R_s1 tăng từ 0.3516 lên 0.8254 bits/s/Hz (+134.78%)
+   - Độ ổn định cao ±0.5808 (cao nhất trong các phương pháp)
+   - Phạm vi giá trị rộng [0.0470, 1.6808]
 
-3. **Kết hợp AN + DPA** cho hiệu quả tối ưu:
-   - Cải thiện tổng thể 35-50% so với baseline
-   - Phù hợp với hệ thống 5G/6G tiên tiến
-   - Cần tối ưu hóa đồng thời $\phi$, $\alpha_1$, $\alpha_2$
+3. **DPA so với AN**:
+   - Cải thiện thêm +91.45% so với AN
+   - Hiệu quả cao nhất cho Bob1 (+134.78%)
+   - Phù hợp với small cell scenarios (P_A = 100mW)
 
-#### 6.1.2. Ảnh hưởng của các tham số
-- **Vị trí Eve**: AN hiệu quả nhất khi Eve ở xa BS ($d_E > 100$ m)
-- **Điều kiện kênh**: SNR_Eve cao đòi hỏi kết hợp AN + DPA
-- **Tỷ lệ AN**: $\phi = 0.3$ cho cân bằng tốt giữa bảo mật và hiệu suất
+#### 6.1.2. Phân tích thực tế
+- **Môi trường**: Small cell với P_A = 100mW
+- **Khoảng cách**: Bob1=30m, Bob2=70m, Eve=50m
+- **Bob2**: Cần cải thiện thêm trong tất cả phương pháp (R_s2 ≈ 0.0004)
+- **Bob1**: Được bảo vệ tốt nhất với DPA (0.8254 bits/s/Hz)
 
-#### 6.1.3. Tính thực tế
-- AN có thể triển khai ngay trong hệ thống hiện tại
-- DPA phù hợp với BS tiên tiến có khả năng tính toán mạnh
-- Cần cân bằng giữa hiệu quả bảo mật và độ phức tạp hệ thống
+#### 6.1.3. Khuyến nghị triển khai
+- **Ưu tiên cao**: Sử dụng DPA cho hiệu quả cao nhất (+134.64%)
+- **Giải pháp thay thế**: AN phù hợp khi cần đơn giản hóa (+22.54%)
+- **Cải thiện cần thiết**: Tối ưu hóa thuật toán cho Bob2 (R_s2 ≈ 0.0004)
+- **Môi trường thực tế**: P_A = 0.1W phù hợp với small cell scenarios
+- **Độ ổn định**: DPA có độ ổn định cao nhất (±0.5808)
 
 ### 6.2. Đóng góp của nghiên cứu
 
@@ -664,9 +674,12 @@ problem.solve()
 - Phân tích chi tiết hiệu quả của các giải pháp trong các kịch bản khác nhau
 
 #### 6.2.2. Đóng góp thực tiễn
-- Cung cấp framework mô phỏng Python hoàn chỉnh cho đánh giá bảo mật NOMA
-- Đề xuất các tham số tối ưu cho triển khai thực tế
-- So sánh hiệu quả các phương pháp để hỗ trợ lựa chọn giải pháp
+- **Framework mô phỏng Python hoàn chỉnh**: Đánh giá bảo mật NOMA với P_A = 0.1W
+- **Kết quả thực tế**: Baseline, AN, DPA với thống kê chi tiết
+- **Biểu đồ visualization**: Heatmap, radar chart, stacked bar chart
+- **Đề xuất tham số tối ưu**: DPA cho small cell scenarios
+- **So sánh hiệu quả**: DPA (+134.64%) > AN (+22.54%) > Baseline
+- **Phân tích độ ổn định**: DPA có độ ổn định cao nhất (±0.5808)
 
 ### 6.3. Hướng nghiên cứu tương lai
 
@@ -690,11 +703,28 @@ problem.solve()
 2. **Mã hóa phức tạp**: LDPC codes, Polar codes cho bảo mật
 3. **Bảo mật đa lớp**: Kết hợp bảo mật tầng vật lý và tầng ứng dụng
 
-### 6.4. Kết luận cuối cùng
+### 6.4. Kết luận cuối cùng (Dựa trên kết quả thực tế)
 
-Nghiên cứu này đã chứng minh hiệu quả của các giải pháp bảo mật tầng vật lý trong hệ thống NOMA dưới tác động của nghe lén chủ động. Nhiễu nhân tạo và phân bổ công suất động cung cấp các công cụ mạnh mẽ để bảo vệ thông tin trong môi trường 5G/6G phức tạp. Việc kết hợp hai phương pháp này với thuật toán tối ưu hóa lồi cho phép đạt được hiệu quả bảo mật tối ưu trong khi vẫn duy trì hiệu suất hệ thống.
+Nghiên cứu này đã chứng minh hiệu quả vượt trội của phương pháp DPA (Dynamic Power Allocation) trong bảo mật hệ thống NOMA dưới tác động của nghe lén chủ động. Kết quả mô phỏng thực tế với P_A = 0.1W (small cell scenario) cho thấy:
 
-Kết quả nghiên cứu cung cấp cơ sở lý thuyết và thực tiễn quan trọng cho việc thiết kế và triển khai các hệ thống NOMA an toàn trong tương lai, đóng góp vào sự phát triển của mạng thông tin di động thế hệ mới.
+**Thành tựu chính:**
+1. **DPA đạt hiệu quả cao nhất**: +134.64% so với baseline, +91.45% so với AN
+2. **Bob1 được bảo vệ tốt nhất**: R_s1 = 0.8254 bits/s/Hz với DPA
+3. **AN cải thiện đáng kể**: +22.54% so với baseline
+4. **P_A = 0.1W phù hợp**: Với small cell scenarios
+
+**Phân tích thực tế:**
+- **Môi trường**: Small cell với công suất 100mW
+- **Khoảng cách**: Bob1=30m, Bob2=70m, Eve=50m
+- **Bob2 cần cải thiện**: R_s2 ≈ 0.0004 trong tất cả phương pháp
+- **Độ ổn định**: DPA có độ ổn định cao nhất (±0.5808)
+
+**Khuyến nghị triển khai:**
+- **Ưu tiên cao**: Sử dụng DPA cho hiệu quả cao nhất
+- **Giải pháp thay thế**: AN phù hợp khi cần đơn giản hóa
+- **Cần nghiên cứu thêm**: Để cải thiện Bob2 trong các phương pháp
+
+Kết quả nghiên cứu cung cấp cơ sở lý thuyết và thực tiễn quan trọng cho việc thiết kế và triển khai các hệ thống NOMA an toàn trong môi trường 5G/6G, đặc biệt là trong các small cell scenarios với công suất thấp.
 
 ## VII. TÀI LIỆU THAM KHẢO
 

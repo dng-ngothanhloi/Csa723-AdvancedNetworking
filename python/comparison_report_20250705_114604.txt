@@ -1,0 +1,41 @@
+BÁO CÁO SO SÁNH HIỆU QUẢ NOMA SECURITY
+==================================================
+
+Thời gian tạo: 2025-07-05 11:46:04
+
+KẾT QUẢ CHI TIẾT:
+
+Baseline (không AN):
+  R_s1 trung bình: 0.7405 bits/s/Hz
+  R_s2 trung bình: 0.0004 bits/s/Hz
+  R_sum trung bình: 0.7408 bits/s/Hz
+
+Với AN:
+  R_s1 trung bình: 1.0936 bits/s/Hz
+  R_s2 trung bình: 0.0005 bits/s/Hz
+  R_sum trung bình: 1.0941 bits/s/Hz
+
+Với AN + DPA:
+  R_s1 trung bình: 0.8387 bits/s/Hz
+  R_s2 trung bình: 0.0005 bits/s/Hz
+  R_sum trung bình: 0.8393 bits/s/Hz
+
+Baseline d_E:
+  R_s1 trung bình: 0.0000 bits/s/Hz
+  R_s2 trung bình: 19.2541 bits/s/Hz
+  R_sum trung bình: 19.2541 bits/s/Hz
+
+AN d_E:
+  R_s1 trung bình: 1.7024 bits/s/Hz
+  R_s2 trung bình: 0.7281 bits/s/Hz
+  R_sum trung bình: 2.4305 bits/s/Hz
+
+AN + DPA d_E:
+  R_s1 trung bình: 1.8268 bits/s/Hz
+  R_s2 trung bình: 0.7196 bits/s/Hz
+  R_sum trung bình: 2.5464 bits/s/Hz
+
+PHƯƠNG PHÁP TỐT NHẤT:
+  R_s1: AN + DPA d_E (1.8268)
+  R_s2: Baseline d_E (19.2541)
+  R_sum: Baseline d_E (19.2541)

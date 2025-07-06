@@ -115,7 +115,7 @@ def create_comparison_plots(results):
     fig, ax = plt.subplots(figsize=(12, 8))
     r_s1_values = [results[m]['R_s1_avg'] for m in methods]
     bars1 = ax.bar(methods, r_s1_values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'], alpha=0.8)
-    ax.set_title('Secrecy Rate Bob1 (R_s1) - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Secrecy Rate Bob1 (R_s1) - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.grid(True, alpha=0.3)
@@ -135,7 +135,7 @@ def create_comparison_plots(results):
     fig, ax = plt.subplots(figsize=(12, 8))
     r_s2_values = [results[m]['R_s2_avg'] for m in methods]
     bars2 = ax.bar(methods, r_s2_values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'], alpha=0.8)
-    ax.set_title('Secrecy Rate Bob2 (R_s2) - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Secrecy Rate Bob2 (R_s2) - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.grid(True, alpha=0.3)
@@ -155,7 +155,7 @@ def create_comparison_plots(results):
     fig, ax = plt.subplots(figsize=(12, 8))
     r_sum_values = [results[m]['R_sum_avg'] for m in methods]
     bars3 = ax.bar(methods, r_sum_values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'], alpha=0.8)
-    ax.set_title('Sum Secrecy Rate (R_sum) - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Sum Secrecy Rate (R_sum) - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.grid(True, alpha=0.3)
@@ -199,7 +199,7 @@ def create_comparison_plots(results):
             ax.text(bar.get_x() + bar.get_width()/2., height,
                    f'{height:.3f}', ha='center', va='bottom', fontweight='bold')
     
-    plt.suptitle('NOMA Security Methods Comparison - P_A=0.1W', fontsize=16, fontweight='bold')
+    plt.suptitle('NOMA Security Methods Comparison - P_A=1W', fontsize=16, fontweight='bold')
     plt.tight_layout()
     plt.savefig(f'{charts_dir}/04_Combined_Comparison.png', dpi=300, bbox_inches='tight')
     plt.show()
@@ -234,7 +234,7 @@ def create_comparison_plots(results):
             text = ax.text(j, i, f'{heatmap_data[i, j]:.3f}',
                           ha="center", va="center", color="black", fontweight='bold')
     
-    ax.set_title('Heatmap Comparison - P_A=0.1W', fontsize=16, fontweight='bold', pad=20)
+    ax.set_title('Heatmap Comparison - P_A=1W', fontsize=16, fontweight='bold', pad=20)
     plt.colorbar(im, ax=ax, label='Bits/s/Hz')
     plt.tight_layout()
     plt.savefig(f'{charts_dir}/05_Heatmap_Comparison.png', dpi=300, bbox_inches='tight')

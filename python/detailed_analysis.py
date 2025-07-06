@@ -2,7 +2,7 @@
 """
 Phân tích chi tiết kết quả so sánh NOMA Security
 - Phân tích hiệu quả của từng phương pháp
-- Đánh giá thực tế với P_A = 0.1W
+- Đánh giá thực tế với P_A = 1W
 - Đề xuất cải thiện
 """
 
@@ -102,7 +102,7 @@ def analyze_practical_implications():
     print(f"{'='*60}")
     
     print(f"\n🏢 MÔI TRƯỜNG THỰC TẾ:")
-    print(f"   - P_A = 0.1W (100mW) - Small Cell")
+    print(f"   - P_A = 1W (100mW) - Small Cell")
     print(f"   - Băng thông: 10 MHz")
     print(f"   - Khoảng cách: Bob1=30m, Bob2=70m, Eve=50m")
     print(f"   - Số anten: 16 (Massive MIMO)")
@@ -116,7 +116,7 @@ def analyze_practical_implications():
     print(f"   1. Sử dụng DPA cho hiệu quả cao nhất")
     print(f"   2. AN phù hợp khi cần đơn giản hóa")
     print(f"   3. Cần cải thiện bảo mật cho Bob2")
-    print(f"   4. P_A = 0.1W phù hợp với small cell")
+    print(f"   4. P_A = 1W phù hợp với small cell")
 
 def create_detailed_plots(results):
     """Tạo biểu đồ chi tiết với tên file dễ phân biệt"""
@@ -175,7 +175,7 @@ def create_detailed_plots(results):
             ax.text(bar.get_x() + bar.get_width()/2., height,
                    f'{height:.3f}', ha='center', va='bottom', fontweight='bold')
     
-    plt.suptitle('Detailed Comparison with Error Bars - P_A=0.1W', fontsize=16, fontweight='bold')
+    plt.suptitle('Detailed Comparison with Error Bars - P_A=1W', fontsize=16, fontweight='bold')
     plt.tight_layout()
     plt.savefig(f'{charts_dir}/01_Detailed_Comparison_ErrorBars.png', dpi=300, bbox_inches='tight')
     plt.show()
@@ -210,7 +210,7 @@ def create_detailed_plots(results):
             text = ax.text(j, i, f'{heatmap_data[i, j]:.3f}',
                           ha="center", va="center", color="black", fontweight='bold')
     
-    ax.set_title('Heatmap Comparison - P_A=0.1W', fontsize=16, fontweight='bold', pad=20)
+    ax.set_title('Heatmap Comparison - P_A=1W', fontsize=16, fontweight='bold', pad=20)
     plt.colorbar(im, ax=ax, label='Bits/s/Hz')
     plt.tight_layout()
     plt.savefig(f'{charts_dir}/02_Heatmap_Comparison.png', dpi=300, bbox_inches='tight')
@@ -245,7 +245,7 @@ def create_detailed_plots(results):
         ax.set_title(f'{method} Performance', fontsize=14, fontweight='bold', pad=20)
         ax.grid(True)
     
-    plt.suptitle('Radar Chart Comparison - P_A=0.1W', fontsize=16, fontweight='bold')
+    plt.suptitle('Radar Chart Comparison - P_A=1W', fontsize=16, fontweight='bold')
     plt.tight_layout()
     plt.savefig(f'{charts_dir}/03_Radar_Chart_Comparison.png', dpi=300, bbox_inches='tight')
     plt.show()
@@ -278,7 +278,7 @@ def create_detailed_plots(results):
         total_height = height1 + height2
         ax.text(i, total_height + 0.01, f'{total_height:.3f}', ha='center', va='bottom', fontweight='bold', color='red')
     
-    ax.set_title('Stacked Secrecy Rates - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Stacked Secrecy Rates - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.legend()
@@ -325,7 +325,7 @@ def generate_recommendations(results):
     print(f"   4. Mở rộng cho multi-user scenarios")
     
     print(f"\n📊 THÔNG SỐ THỰC TẾ:")
-    print(f"   - P_A = 0.1W phù hợp với small cell")
+    print(f"   - P_A = 1W phù hợp với small cell")
     print(f"   - Hiệu quả DPA: +131.96% so với baseline")
     print(f"   - AN cải thiện: +21.23% so với baseline")
     print(f"   - Bob2 cần được cải thiện thêm")
@@ -334,7 +334,7 @@ def main():
     """Hàm chính"""
     print("🔍 PHÂN TÍCH CHI TIẾT KẾT QUẢ NOMA SECURITY")
     print(f"Thời gian: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("P_A = 0.1W (100mW) - Small Cell Scenario")
+    print("P_A = 1W (100mW) - Small Cell Scenario")
     
     # Tải và phân tích kết quả
     results = load_and_analyze_results()

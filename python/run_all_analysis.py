@@ -110,7 +110,7 @@ Thời gian tạo: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 ## 📊 TỔNG QUAN
 - Tổng số biểu đồ đã tạo: {total_charts}
-- P_A = 0.1W (Small Cell Scenario)
+- P_A = 1W (Small Cell Scenario)
 - Phương pháp: Baseline, AN, DPA
 
 ## 📁 CÁC THƯ MỤC KẾT QUẢ
@@ -138,7 +138,7 @@ Thời gian tạo: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 - DPA cho hiệu quả cao nhất: +131.96% so với Baseline
 - AN cải thiện đáng kể: +21.23% so với Baseline
 - Bob2 cần được cải thiện thêm về bảo mật
-- P_A = 0.1W phù hợp với small cell scenarios
+- P_A = 1W phù hợp với small cell scenarios
 
 ## 📈 KHUYẾN NGHỊ
 1. Sử dụng DPA cho hiệu quả cao nhất
@@ -157,7 +157,7 @@ def main():
     """Hàm chính"""
     print("🚀 CHẠY TẤT CẢ PHÂN TÍCH NOMA SECURITY")
     print(f"Thời gian: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("P_A = 0.1W (100mW) - Small Cell Scenario")
+    print("P_A = 1W (100mW) - Small Cell Scenario")
     print("="*60)
     
     start_time = time.time()

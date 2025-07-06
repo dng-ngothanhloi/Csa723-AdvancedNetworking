@@ -19,7 +19,7 @@ def compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, phi, N_0, P_
     return SNR_B1, SNR_B2, SNR_E1, SNR_E2
 
 # Thông số hệ thống
-P_A = 0.1
+P_A = 1
 N_0 = 1e-15
 alpha = 3
 B = 10e6

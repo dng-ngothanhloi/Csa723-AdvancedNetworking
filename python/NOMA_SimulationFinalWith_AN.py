@@ -27,7 +27,7 @@ def compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, phi, N_0, P_
 # KỊCH BẢN 2: Multi-user NOMA, quét SNR_Eve (Eve chủ động gây nhiễu)
 print("\n===== KỊCH BẢN 2: Multi-user NOMA, quét SNR_Eve (Eve chủ động gây nhiễu) =====")
 # Thông số hệ thống
-P_A = 0.1  # Công suất truyền tổng (W) ~ 20 dBm - THAY ĐỔI TỪ 1W XUỐNG 0.1W
+P_A = 1 # Công suất truyền tổng (W) ~ 20 dBm - THAY ĐỔI TỪ 1W XUỐNG 0.1W
 N_0 = 1e-15  # Nhiễu nền (W)
 alpha = 3  # Hệ số suy hao kênh
 B = 10e6  # Băng thông (Hz)
@@ -38,7 +38,7 @@ d_B2 = 70  # Khoảng cách Bob2 (m)
 d_E = 50  # Khoảng cách Eve cố định (m)
 R_th = 1.0  # Ngưỡng bảo mật (bits/s/Hz)
 epsilon = 0.005  # Tỷ lệ lỗi SIC
-pilot_contamination_power = 0.0  # Công suất nhiễu pilot - loại bỏ Nhiễu Định vị của EVE
+pilot_contamination_power = 0.2  # Công suất nhiễu pilot - loại bỏ Nhiễu Định vị của EVE
 phi_values = [0.3]  # Tỷ lệ công suất AN
 
 # Phân bổ công suất

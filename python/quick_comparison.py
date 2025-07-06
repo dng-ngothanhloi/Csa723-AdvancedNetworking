@@ -33,7 +33,7 @@ def compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, N_0, P_E, d_
     return SNR_B1, SNR_B2, SNR_E1, SNR_E2
 
 # Thông số hệ thống
-P_A = 0.1  # 100mW
+P_A = 1  # 100mW
 N_0 = 1e-15
 alpha = 3
 B = 10e6
@@ -114,7 +114,7 @@ def compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, phi, N_0, P_
     return SNR_B1, SNR_B2, SNR_E1, SNR_E2
 
 # Thông số hệ thống
-P_A = 0.1
+P_A = 1
 N_0 = 1e-15
 alpha = 3
 B = 10e6
@@ -213,7 +213,7 @@ def adaptive_dpa(d_E, SNR_Eve_dB, h_B1_mean, h_B2_mean, h_E_mean, P_A_max=0.1):
     return alpha1, alpha2, phi
 
 # Thông số hệ thống
-P_A = 0.1
+P_A = 1
 N_0 = 1e-15
 alpha = 3
 B = 10e6
@@ -376,7 +376,7 @@ def create_comparison_plot(results):
     # Biểu đồ 1: So sánh R_s1 (Bob1)
     fig, ax = plt.subplots(figsize=(10, 6))
     bars1 = ax.bar(methods, r_s1_values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'], alpha=0.8)
-    ax.set_title('Secrecy Rate Bob1 (R_s1) - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Secrecy Rate Bob1 (R_s1) - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.grid(True, alpha=0.3)
@@ -395,7 +395,7 @@ def create_comparison_plot(results):
     # Biểu đồ 2: So sánh R_s2 (Bob2)
     fig, ax = plt.subplots(figsize=(10, 6))
     bars2 = ax.bar(methods, r_s2_values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'], alpha=0.8)
-    ax.set_title('Secrecy Rate Bob2 (R_s2) - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Secrecy Rate Bob2 (R_s2) - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.grid(True, alpha=0.3)
@@ -414,7 +414,7 @@ def create_comparison_plot(results):
     # Biểu đồ 3: So sánh R_sum (Tổng)
     fig, ax = plt.subplots(figsize=(10, 6))
     bars3 = ax.bar(methods, r_sum_values, color=['#FF6B6B', '#4ECDC4', '#45B7D1'], alpha=0.8)
-    ax.set_title('Sum Secrecy Rate (R_sum) - P_A=0.1W', fontsize=16, fontweight='bold')
+    ax.set_title('Sum Secrecy Rate (R_sum) - P_A=1W', fontsize=16, fontweight='bold')
     ax.set_ylabel('Bits/s/Hz', fontsize=14)
     ax.set_xlabel('Phương pháp', fontsize=14)
     ax.grid(True, alpha=0.3)
@@ -458,7 +458,7 @@ def create_comparison_plot(results):
             ax.text(bar.get_x() + bar.get_width()/2., height,
                    f'{height:.3f}', ha='center', va='bottom', fontweight='bold')
     
-    plt.suptitle('NOMA Security Methods Comparison - P_A=0.1W', fontsize=16, fontweight='bold')
+    plt.suptitle('NOMA Security Methods Comparison - P_A=1W', fontsize=16, fontweight='bold')
     plt.tight_layout()
     plt.savefig(f'{charts_dir}/04_Combined_Comparison.png', dpi=300, bbox_inches='tight')
     plt.show()
@@ -511,7 +511,7 @@ def main():
     """Hàm chính"""
     print("🚀 SO SÁNH NHANH HIỆU QUẢ NOMA SECURITY")
     print(f"Thời gian: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("P_A = 0.1W (100mW) - Small Cell Scenario")
+    print("P_A = 1W (100mW) - Small Cell Scenario")
     
     # Chạy mô phỏng
     execution_times = run_quick_simulations()

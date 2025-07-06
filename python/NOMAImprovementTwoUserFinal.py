@@ -22,7 +22,7 @@ def compute_snr(h_B1, h_B2, h_E, h_EB1, h_EB2, P_A, alpha1, alpha2, N_0, P_E, d_
 # KỊCH BẢN 2: Multi-user and Eve, quét SNR_Eve (Eve chủ động gây nhiễu)
 print("\n===== KỊCH BẢN 2: Multi-user NOMA, quét SNR_Eve (Eve chủ động gây nhiễu) =====")
 # Thông số hệ thống
-P_A = 0.1  # Công suất truyền tổng (W) ~ 20 dBm - THAY ĐỔI TỪ 1W XUỐNG 0.1W
+P_A = 1 # Công suất truyền tổng (W) ~ 20 dBm - THAY ĐỔI TỪ 1W XUỐNG 0.1W
 N_0 = 1e-15  # Nhiễu nền (W)
 alpha = 3  # Hệ số suy hao kênh
 B = 10e6  # Băng thông (Hz)

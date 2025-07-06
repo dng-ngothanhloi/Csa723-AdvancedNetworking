@@ -36,7 +36,7 @@ def adaptive_dpa(d_E, SNR_Eve_dB, h_B1_mean, h_B2_mean, h_E_mean, P_A_max=0.1):
     return alpha1, alpha2, phi
 
 # Thông số hệ thống
-P_A = 0.1
+P_A = 1
 N_0 = 1e-15
 alpha = 3
 B = 10e6

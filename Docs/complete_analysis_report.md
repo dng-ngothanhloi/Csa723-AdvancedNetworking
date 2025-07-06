@@ -1,7 +1,7 @@
 # BÁO CÁO PHÂN TÍCH HOÀN CHỈNH: NOMA SECURITY COMPARISON
 
 **Thời gian:** 2025-07-04 15:03:55  
-**Môi trường:** P_A = 0.1W (100mW) - Small Cell Scenario  
+**Môi trường:** P_A = 1W (100mW) - Small Cell Scenario  
 **Phương pháp so sánh:** Baseline, AN, DPA
 
 ---
@@ -93,7 +93,7 @@ So sánh hiệu quả của các phương pháp bảo mật NOMA:
 - **Hệ số suy hao:** α = 3
 
 ### Đánh giá thực tế:
-- ✅ **P_A = 0.1W phù hợp** với small cell scenarios
+- ✅ **P_A = 1W phù hợp** với small cell scenarios
 - ✅ **DPA hiệu quả** trong môi trường thực tế (+134.64%)
 - ✅ **AN cải thiện** đáng kể so với baseline (+22.54%)
 - ⚠️ **Bob2 cần cải thiện** thêm trong tất cả phương pháp
@@ -209,7 +209,7 @@ So sánh hiệu quả của các phương pháp bảo mật NOMA:
 ### Thành tựu chính:
 1. **DPA cho hiệu quả cao nhất** (+134.64% so với Baseline)
 2. **AN cải thiện đáng kể** (+22.54% so với Baseline)
-3. **P_A = 0.1W phù hợp** với small cell scenarios
+3. **P_A = 1W phù hợp** với small cell scenarios
 4. **Bob1 được bảo vệ tốt** với DPA (0.8254 bits/s/Hz)
 
 ### Phân tích từ biểu đồ:
@@ -228,7 +228,7 @@ So sánh hiệu quả của các phương pháp bảo mật NOMA:
 - **Sử dụng DPA** cho hiệu quả cao nhất
 - **AN là giải pháp thay thế** tốt khi cần đơn giản
 - **Cần nghiên cứu thêm** để cải thiện Bob2
-- **P_A = 0.1W** là lựa chọn tối ưu cho small cell
+- **P_A = 1W** là lựa chọn tối ưu cho small cell
 
 ---
 

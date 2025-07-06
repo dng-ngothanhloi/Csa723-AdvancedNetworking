@@ -312,7 +312,7 @@ def comprehensive_dpa_optimization(d_E, SNR_Eve_dB, h_B1_mean, h_B2_mean, h_E_me
 ### 3.1. Mô hình hệ thống mô phỏng
 
 #### 3.1.1. Thông số hệ thống
-- **Công suất truyền**: $P_A = 0.1$ W (~20 dBm)
+- **Công suất truyền**: $P_A = 1$ W (~20 dBm)
 - **Nhiễu nền**: $N_0 = 10^{-15}$ W
 - **Băng thông**: $B = 10$ MHz
 - **Hệ số suy hao kênh**: $\alpha = 3$
@@ -375,7 +375,7 @@ problem.solve()
 
 ## IV. KẾT QUẢ MÔ PHỎNG VÀ PHÂN TÍCH
 
-### 4.1. Kết quả mô phỏng thực tế (P_A = 0.1W - Small Cell)
+### 4.1. Kết quả mô phỏng thực tế (P_A = 1W - Small Cell)
 
 #### 4.1.1. Hiệu năng hệ thống baseline (không AN)
 **Kết quả thực tế từ mô phỏng Python**:
@@ -535,7 +535,7 @@ problem.solve()
 - **Thời gian cập nhật**: Cần cập nhật tham số theo thời gian thực
 - **Ứng dụng**: Phù hợp với BS tiên tiến có khả năng tính toán mạnh
 
-#### 4.3.3. Kết quả với thuật toán DPA nâng cao (P_A = 0.1W)
+#### 4.3.3. Kết quả với thuật toán DPA nâng cao (P_A = 1W)
 
 **Kết quả thực tế từ mô phỏng Python**:
 
@@ -663,7 +663,7 @@ problem.solve()
 - **Ưu tiên cao**: Sử dụng DPA cho hiệu quả cao nhất (+134.64%)
 - **Giải pháp thay thế**: AN phù hợp khi cần đơn giản hóa (+22.54%)
 - **Cải thiện cần thiết**: Tối ưu hóa thuật toán cho Bob2 (R_s2 ≈ 0.0004)
-- **Môi trường thực tế**: P_A = 0.1W phù hợp với small cell scenarios
+- **Môi trường thực tế**: P_A = 1W phù hợp với small cell scenarios
 - **Độ ổn định**: DPA có độ ổn định cao nhất (±0.5808)
 
 ### 6.2. Đóng góp của nghiên cứu
@@ -674,7 +674,7 @@ problem.solve()
 - Phân tích chi tiết hiệu quả của các giải pháp trong các kịch bản khác nhau
 
 #### 6.2.2. Đóng góp thực tiễn
-- **Framework mô phỏng Python hoàn chỉnh**: Đánh giá bảo mật NOMA với P_A = 0.1W
+- **Framework mô phỏng Python hoàn chỉnh**: Đánh giá bảo mật NOMA với P_A = 1W
 - **Kết quả thực tế**: Baseline, AN, DPA với thống kê chi tiết
 - **Biểu đồ visualization**: Heatmap, radar chart, stacked bar chart
 - **Đề xuất tham số tối ưu**: DPA cho small cell scenarios
@@ -705,13 +705,13 @@ problem.solve()
 
 ### 6.4. Kết luận cuối cùng (Dựa trên kết quả thực tế)
 
-Nghiên cứu này đã chứng minh hiệu quả vượt trội của phương pháp DPA (Dynamic Power Allocation) trong bảo mật hệ thống NOMA dưới tác động của nghe lén chủ động. Kết quả mô phỏng thực tế với P_A = 0.1W (small cell scenario) cho thấy:
+Nghiên cứu này đã chứng minh hiệu quả vượt trội của phương pháp DPA (Dynamic Power Allocation) trong bảo mật hệ thống NOMA dưới tác động của nghe lén chủ động. Kết quả mô phỏng thực tế với P_A = 1W (small cell scenario) cho thấy:
 
 **Thành tựu chính:**
 1. **DPA đạt hiệu quả cao nhất**: +134.64% so với baseline, +91.45% so với AN
 2. **Bob1 được bảo vệ tốt nhất**: R_s1 = 0.8254 bits/s/Hz với DPA
 3. **AN cải thiện đáng kể**: +22.54% so với baseline
-4. **P_A = 0.1W phù hợp**: Với small cell scenarios
+4. **P_A = 1W phù hợp**: Với small cell scenarios
 
 **Phân tích thực tế:**
 - **Môi trường**: Small cell với công suất 100mW

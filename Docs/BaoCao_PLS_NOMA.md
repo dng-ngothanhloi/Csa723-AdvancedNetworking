@@ -11,7 +11,7 @@ Các nguyên tắc cơ bản của PLS bao gồm:
   $$  C_s = \max(0, C_m - C_e) $$
 
 
-  Trong đó, $$(C_m$$$$ là dung lượng kênh chính (main channel) và $$C_e$$ là dung lượng kênh của kẻ nghe lén (eavesdropping channel).
+  Trong đó, $$(C_m$$ là dung lượng kênh chính (main channel) và $$C_e$$ là dung lượng kênh của kẻ nghe lén (eavesdropping channel).
 
 - **Kỹ thuật mã hóa kênh:** Sử dụng các mã như mã LDPC hoặc mã Polar để tăng cường bảo mật bằng cách làm giảm khả năng giải mã thành công của kẻ nghe lén.
 - **Tận dụng nhiễu:** Nhiễu tự nhiên hoặc nhiễu nhân tạo (artificial noise) được thêm vào tín hiệu để làm giảm tỷ lệ tín hiệu trên nhiễu (SNR) tại kẻ nghe lén, trong khi vẫn đảm bảo chất lượng tín hiệu tại người dùng hợp pháp.

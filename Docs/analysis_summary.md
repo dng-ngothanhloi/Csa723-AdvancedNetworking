@@ -4,7 +4,7 @@ Thời gian tạo: 2025-07-04 15:15:16
 
 ## 📊 TỔNG QUAN
 - Tổng số biểu đồ đã tạo: 13
-- P_A = 0.1W (Small Cell Scenario)
+- P_A = 1W (Small Cell Scenario)
 - Phương pháp: Baseline, AN, DPA
 
 ## 📁 CÁC THƯ MỤC KẾT QUẢ
@@ -32,7 +32,7 @@ Thời gian tạo: 2025-07-04 15:15:16
 - DPA cho hiệu quả cao nhất: +131.96% so với Baseline
 - AN cải thiện đáng kể: +21.23% so với Baseline
 - Bob2 cần được cải thiện thêm về bảo mật
-- P_A = 0.1W phù hợp với small cell scenarios
+- P_A = 1W phù hợp với small cell scenarios
 
 ## 📈 KHUYẾN NGHỊ
 1. Sử dụng DPA cho hiệu quả cao nhất

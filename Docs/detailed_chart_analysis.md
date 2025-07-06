@@ -1,7 +1,7 @@
 # PHÂN TÍCH CHI TIẾT BIỂU ĐỒ VÀ KẾT QUẢ NOMA SECURITY
 
 **Thời gian:** 2025-07-04 15:03:55  
-**Môi trường:** P_A = 0.1W (100mW) - Small Cell Scenario  
+**Môi trường:** P_A = 1W (100mW) - Small Cell Scenario  
 **Phương pháp so sánh:** Baseline, AN, DPA
 
 ---
@@ -132,7 +132,7 @@
 
 ### Đánh giá thực tế:
 
-#### 1. **P_A = 0.1W phù hợp:**
+#### 1. **P_A = 1W phù hợp:**
 - ✅ **Small cell scenarios:** 100mW phù hợp
 - ✅ **Tiết kiệm năng lượng:** So với 1W
 - ✅ **Hiệu quả:** Vẫn đạt kết quả tốt
@@ -190,7 +190,7 @@
 
 #### Ưu tiên cao:
 - **Sử dụng DPA** cho hiệu quả cao nhất (+134.64%)
-- **Triển khai trong small cell** với P_A = 0.1W
+- **Triển khai trong small cell** với P_A = 1W
 - **Tối ưu hóa cho Bob1** (hiệu quả cao nhất)
 
 #### Giải pháp thay thế:
@@ -214,7 +214,7 @@
 #### Small cell networks:
 - **DPA cho hiệu quả cao**
 - **AN cho đơn giản**
-- **P_A = 0.1W phù hợp**
+- **P_A = 1W phù hợp**
 
 #### IoT applications:
 - **AN phù hợp** cho IoT đơn giản
@@ -234,7 +234,7 @@
 - **Hiệu quả cao nhất:** +134.64% so với Baseline
 - **Linh hoạt nhất:** ±0.5808 (độ ổn định cao)
 - **Phạm vi rộng nhất:** [0.0470, 1.6808]
-- **Phù hợp small cell:** Với P_A = 0.1W
+- **Phù hợp small cell:** Với P_A = 1W
 
 #### 2. **AN cải thiện đáng kể:**
 - **Hiệu quả tốt:** +22.54% so với Baseline
@@ -274,7 +274,7 @@
 #### 1. **Sử dụng DPA** cho hiệu quả cao nhất
 #### 2. **AN là giải pháp thay thế** tốt khi cần đơn giản
 #### 3. **Cần nghiên cứu thêm** để cải thiện Bob2
-#### 4. **P_A = 0.1W** là lựa chọn tối ưu cho small cell
+#### 4. **P_A = 1W** là lựa chọn tối ưu cho small cell
 
 ---
 

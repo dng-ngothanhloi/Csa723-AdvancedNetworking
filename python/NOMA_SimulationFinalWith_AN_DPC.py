@@ -1,4 +1,5 @@
-## Added AN for NOMAImprovementTwoUserFinal.py ORIGINAL
+## Added AN for NOMAImprovementTwoUserFinal.py AN & DPA
+# ORIGINAL
 import numpy as np
 import matplotlib.pyplot as plt
 from numba import jit
